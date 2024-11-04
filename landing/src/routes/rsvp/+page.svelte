@@ -54,6 +54,22 @@ $effect(() => {
     }, 5000);
   }
 });
+
+// Reactive variable to store the ID of the last checked checkbox
+let lastChecked = $state(null);
+
+// Function to handle checkbox changes
+const handleCheck = (event) => {
+  if (event.target.checked) {
+    // If a checkbox is checked, set it as the last checked
+    lastChecked = event.target.id;
+  } else {
+    // If the last checked checkbox is unchecked, clear the lastChecked variable
+    if (lastChecked === event.target.id) {
+      lastChecked = null;
+    }
+  }
+};
 </script>
 
 <svelte:window bind:innerWidth bind:innerHeight></svelte:window>
@@ -96,37 +112,37 @@ $effect(() => {
         }}}>
   </div>
       <div class="days">
-        <p class="question">In quali momenti del weekend vorresti venire?</p>
+        <p class="question">In quale momento del weekend vorresti venire?</p>
         <div class="day text-m">
           <label for="fri" class="day-name">Fri 29.11</label>
           <div>
-            <input type="checkbox" id="fri-morning" name="fri-morning" class="big"/>
+            <input type="checkbox" id="fri-morning" name="fri-morning" class="big" checked={lastChecked === 'fri-morning'} onchange={handleCheck}/>
             <label for="fri-morning">Mattina</label>
           </div>
           <div>
-            <input type="checkbox" id="fri-afternoon" name="fri-afternoon" class="big"/>
+            <input type="checkbox" id="fri-afternoon" name="fri-afternoon" class="big" checked={lastChecked === 'fri-afternoon'} onchange={handleCheck}/>
             <label for="fri-afternoon">Pomeriggio</label>
           </div>
         </div>
         <div class="day text-m">
           <label for="sat" class="day-name">Sat 30.11</label>
           <div>
-            <input type="checkbox" id="sat-morning" name="sat-morning" class="big"/>
+            <input type="checkbox" id="sat-morning" name="sat-morning" class="big" checked={lastChecked === 'sat-morning'} onchange={handleCheck}/>
             <label for="sat-morning">Mattina</label>
           </div>
           <div>
-            <input type="checkbox" id="sat-afternoon" name="sat-afternoon" class="big"/>
+            <input type="checkbox" id="sat-afternoon" name="sat-afternoon" class="big" checked={lastChecked === 'sat-afternoon'} onchange={handleCheck}/>
             <label for="sat-afternoon">Pomeriggio</label>
           </div>
         </div>
         <div class="day text-m">
           <label for="sun" class="day-name">Sun 01.12</label>
           <div>
-            <input type="checkbox" id="sun-morning" name="sun-morning" class="big"/>
+            <input type="checkbox" id="sun-morning" name="sun-morning" class="big" checked={lastChecked === 'sun-morning'} onchange={handleCheck}/>
             <label for="sun-morning">Mattina</label>
           </div>
           <div>
-            <input type="checkbox" id="sun-afternoon" name="sun-afternoon" class="big"/>
+            <input type="checkbox" id="sun-afternoon" name="sun-afternoon" class="big" checked={lastChecked === 'sun-afternoon'} onchange={handleCheck}/>
             <label for="sun-afternoon">Pomeriggio</label>
           </div>
         </div>

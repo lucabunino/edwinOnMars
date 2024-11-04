@@ -104,7 +104,7 @@ export const actions = {
         subject: `Edwin on Mars | RSVP`,
         text: `Thank you ${data.name} ${data.surname}! We received your RSVP`,
         html: `
-          <p>Ciao ${data.name}! La tua registrazione è avvenuta con successo. Ti aspettiamo a casa di Edwin!<br>
+          <p>Ciao ${data.name}! La tua registrazione è avvenuta con successo. Ti aspettiamo a casa di Edwin in viale Ortles 88/A, Milano!<br>
           Avrai la possibilità di visitare l'esposizione e di acquistare i migliori pezzi di Design del Novecento.</p>
           <p>Hai prenotato nei seguenti giorni e orari:</p>
           ${daysText}
