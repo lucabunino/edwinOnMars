@@ -15,7 +15,7 @@ const canvaser = getCanvas();
 const handleEnhance = ({ formElement, formData, action, cancel }) => {
   if (canvaser.canvas) {
     console.log(canvaser.canvas);
-    formData.append('file', canvaser.canvas, 'placeholder.png');
+    formData.append('file', canvaser.canvas, 'drawing.png');
   }
   return async ({ result }) => {
     if (result.data.success) {
@@ -143,7 +143,7 @@ $effect(() => {
         {:else if formResponse?.success === false && !formResponse.empty}
           <p class="alert btn inverted text-xs form-response">Errore al momento dell’invio. Riprova.</p>
         {:else if isSubmitting}
-          <p class="alert btn inverted text-xs form-response">Invio in corso</p>
+          <p class="alert btn inverted text-xs form-response">Invio in corso. Ci vorrà qualche secondo!</p>
         {/if}
       </div>
       <div class="text-xs checkbox-container">

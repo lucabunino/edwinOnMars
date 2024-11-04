@@ -95,7 +95,7 @@ export const actions = {
       });
 
       const daysText = selectedDays.length
-        ? `<p>Ti aspettiamo nei seguenti giorni e orari:</p><ul>${selectedDays.map(day => `<li>${day}</li>`).join('')}</ul>`
+        ? `<ul>${selectedDays.map(day => `<li>${day}</li>`).join('')}</ul>`
         : '<p>Non hai selezionato alcun giorno specifico.</p>';
 
       const mailToUser = {
@@ -105,6 +105,7 @@ export const actions = {
         text: `Thank you ${data.name} ${data.surname}! We received your RSVP`,
         html: `
           <p>Ciao ${data.name}! La tua registrazione è avvenuta con successo. Ti aspettiamo a casa di Edwin!</p>
+          <p>Hai prenotato nei seguenti giorni e orari:</p>
           ${daysText}
         `
       };
@@ -114,7 +115,8 @@ export const actions = {
         to: "hello@lucabunino.com",
         subject: `Edwin on Mars | RSVP from ${data.name} ${data.surname}`,
         text: `RSVP from: ${data.name} ${data.surname}, email: ${data.email}`,
-        html: `<p>RSVP from: ${data.name} ${data.surname}, <a href="mailto:${data.email}">${data.email}</a></p>`
+        html: `<p>RSVP from: ${data.name} ${data.surname}, <a href="mailto:${data.email}">${data.email}</a></p>
+        ${daysText}`
       };
 
       // Construct the Google Form link with selected days
@@ -127,7 +129,6 @@ export const actions = {
 
       const sendTasks = [
         fetch(googleFormLink),
-        sendEmail(mailToUser)
       ];
 
       const file = formData.get('file');
@@ -136,6 +137,7 @@ export const actions = {
         const stream = Readable.from(buffer);
 
         mailToEdwin.attachments = [{ filename: file.name, content: buffer }];
+        mailToUser.attachments = [{ filename: file.name, content: buffer }];
 
         const uploadTask = authorize()
           .then(authClient => uploadFile(authClient, file, stream))
@@ -143,8 +145,10 @@ export const actions = {
 
         sendTasks.push(uploadTask);
         sendTasks.push(sendEmail(mailToEdwin));
+        sendTasks.push(sendEmail(mailToUser));
       } else {
         sendTasks.push(sendEmail(mailToEdwin));
+        sendTasks.push(sendEmail(mailToUser));
       }
 
       await Promise.all(sendTasks);

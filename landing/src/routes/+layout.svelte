@@ -128,7 +128,7 @@ const generateBlob = async (canvas) => {
 </script>
 
 <svelte:head>
-  {#if data.color1 === '#10069F' && data.color2 === '#BA5826'}
+  {#if data.color1 === '#FFFBC1' && data.color2 === '#BA5826'}
     <link rel="icon" type="image/png" href="/favicon1/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="/favicon1/favicon.svg" />
     <link rel="shortcut icon" href="/favicon1/favicon.ico" />
@@ -224,7 +224,7 @@ class:inverted={$page.url.pathname !== '/'}
           <a class="rsvp btn active" class:invisible={!loaded} href="/rsvp" class:info={$page.url.pathname === '/info'} class:draw={drawable}
           style="top: unset; display:{innerWidth > 900 && $page.url.pathname === '/' ? 'none' : ''}">RSVP</a>
           <div bind:clientHeight={ctaHeight}>
-            <p class="text-xs">Vuoi disegnare tu? Clicca su “Disegna” e entra nella modalità disegno. Tieni premuto per unire i puntini. Una volta salvato, il disegno ti verrà inviato insieme alla conferma di avvenuta ricezione dell’RSVP.</p>
+            <p class="text-xs">Vuoi disegnare tu? Clicca qui sotto e entra nella modalità disegno. Tieni premuto per unire i puntini. Una volta salvato, il disegno ti verrà inviato insieme alla conferma di avvenuta ricezione dell’RSVP.</p>
             <button class="btn btn-mobile" onclick={() => drawable = true}>Disegna</button>
           </div>
         </div>
@@ -255,7 +255,7 @@ class:inverted={$page.url.pathname !== '/'}
             </button>
             {/if}
             {#if drawingSaved}
-              <p class="alert btn">Salvato! Vai all'RSVP, o clicca su “ricomincia” o “sovrascrivi” per ricominciare o sovrascrivere il disegno.</p>
+              <p class="alert btn">Salvato, Vai all'RSVP! Per ricominciare o perfezionare il disegno, clicca su “ricomincia” o “sovrascrivi” dopo le modifiche.</p>
             {/if}
             <!-- <div class="controls">
               <label>
@@ -528,6 +528,7 @@ nav {
           transform: translate(-50%, -50%);
   text-align: center;
   z-index: 2;
+  border-radius: 1em;
 }
 :global(.alert.inverted) {
   color: var(--color1);
@@ -676,7 +677,7 @@ main {
     height: 100svh;
     padding: var(--gutter);
   }
-  .drawing-buttons.bottom {
+  .drawing-buttons.top {
     top: calc(var(--gutter)*2);
   }
   .drawing-buttons.bottom {
@@ -700,6 +701,9 @@ main {
   .rsvp.draw {
     width: auto;
     margin-left: var(--gutter);
+  }
+  :global(.alert) {
+    width: calc(100% - var(--gutter)*2);
   }
 }
 
@@ -775,6 +779,20 @@ footer a:hover {
   footer svg {
     fill: var(--color2);
     height: 2.5rem;
+  }
+  footer div:nth-child(3) {
+    flex-direction: column;
+    margin-top: 3em;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  footer div:nth-child(3)>div {
+    flex-direction: column;
+    row-gap: 0;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
 }
 </style>

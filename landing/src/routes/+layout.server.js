@@ -2,7 +2,7 @@
 
 export const load = async () => {
   const colorPairs = [
-    ['#10069F', '#BA5826', '/drawings/1.svg', '/drawings/1-mobile.svg',
+    ['#FFFBC1', '#BA5826', '/drawings/1.svg', '/drawings/1-mobile.svg',
      '/img/chair.webp', 'max-width: 45vw; max-height: 70vh; bottom: var(--gutter); right: 10vw',
      '/img/chair-mobile.webp','max-width: 90vw; max-height: 50vh; top: 45%; left: 50%; transform: translate(-50%, -50%)'],
     ['#10069F', '#FFFBC1', '/drawings/2.svg', '/drawings/2-mobile.svg',
