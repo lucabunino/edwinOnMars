@@ -1,6 +1,6 @@
 <script>
   import '../app.css'
-  const { children } = $props()
+  const { data, children } = $props()
 
   // Import from svelte/lib
   import { page } from '$app/stores';
@@ -18,35 +18,6 @@
   let canvasImgBlob = $state();
   let drawingSaved = $state(false);
   let ctaHeight = $state();
-
-  let colorPairs = [
-    ['#10069F', '#BA5826', '/drawings/1.svg', '/drawings/1-mobile.svg',
-    '/img/chair.webp', 'max-width: 45vw; max-height: 70vh; bottom: var(--gutter); right: 10vw',
-    '/img/chair-mobile.webp','max-width: 90vw; max-height: 50vh; top: 50%; left: 50%; transform: translate(-50%, -50%);'],
-    ['#FFFBC1', '#43B02A', '/drawings/2.svg', '/drawings/2-mobile.svg',
-    '/img/table.webp', 'max-width: 45vw; max-height: 70vh; bottom: 10vh; right: 10vw',
-    '/img/table.webp','max-width: 90vw; max-height: 60vh; top: 50%; left: 50%; transform: translate(-50%, -50%);'],
-    // ['#FFFBC1', '#10069F', '/img/chair.webp', 'max-width: 20vw;'],
-    // ['#43B02A', '#FFFBC1', '/img/chair.webp', 'max-width: 30vw;'],
-    // ['#FFFBC1', '#43B02A', '/drawings/2.svg', '/img/table.webp', 'max-width: 45vw; max-height: 70vh; bottom: var(--gutter); right: 10vw', 'max-width: 90vw; max-height: 50vh; left: 50%; transform: translate(-50%);'],
-    // ['#FFFBC1', '#BA5826']
-  ];
-  let color1 = $state();
-  let color2 = $state();
-  let imgDesktop = $state();
-  let imgStyleDesktop = $state();
-  let imgMobile = $state();
-  let imgStyleMobile = $state();
-  let drawingDots = $state();
-  let drawingDotsMobile = $state();
-  function pickRandomColors() {
-    const randomIndex = Math.floor(Math.random() * colorPairs.length);
-    [color1, color2, drawingDots, drawingDotsMobile, imgDesktop, imgStyleDesktop, imgMobile, imgStyleMobile] = colorPairs[randomIndex];
-  }
-  
-  onMount(() => {
-    pickRandomColors();
-  })
 
   // Functions
   let drawable = $state(false)
@@ -112,7 +83,7 @@ const draw = (event) => {
 
   context.lineWidth = thickness;
   context.lineCap = "round";
-  context.strokeStyle = color1;
+  context.strokeStyle = data.color1;
 
   context.lineTo(x, y);
   context.stroke();
@@ -178,12 +149,11 @@ const generateBlob = async (canvas) => {
 
 
 <div class="bg text-s"
-style="--color1: {color1};--color2: {color2};"
+style="--color1: {data.color1};--color2: {data.color2};"
 class:inverted={$page.url.pathname !== '/'}
 >
 {#if !drawable && $page.url.pathname === '/'}
-  <!-- <img class="object" src={innerWidth > 900 ? imgDesktop : imgMobile} alt="Immagine dell'evento" style="{innerWidth > 900 ? imgStyleDesktop : imgStyleMobile + 'bottom:' + (ctaHeight + 60) + 'px'}"> -->
-  <img class="object" src={innerWidth > 900 ? imgDesktop : imgMobile} alt="Immagine dell'evento" style="{innerWidth > 900 ? imgStyleDesktop : imgStyleMobile}">
+  <img class="object" src={innerWidth > 900 ? data.imgDesktop : data.imgMobile} alt="Immagine dell'evento" style="{innerWidth > 900 ? data.imgStyleDesktop : data.imgStyleMobile}">
 {/if}
 {#if !drawable}
   <header>
@@ -256,7 +226,7 @@ class:inverted={$page.url.pathname !== '/'}
             {/if}
             </button>
             {#if drawingSaved}
-              <p class="alert btn inverted">Vai all'RSVP, o clicca su “ricomincia”<br>per ricominciare il disegno</p>
+              <p class="alert btn inverted">Vai all'RSVP, o clicca su “ricomincia” per ricominciare il disegno</p>
             {/if}
             <!-- <div class="controls">
               <label>
@@ -272,7 +242,7 @@ class:inverted={$page.url.pathname !== '/'}
     {/if}
   </main>
   {#if drawable}
-    <img class="drawing-dots" src={innerWidth > 900 ? drawingDots : drawingDotsMobile} alt="Unisci i puntini">
+    <img class="drawing-dots" src={innerWidth > 900 ? data.drawingDots : data.drawingDotsMobile} alt="Unisci i puntini">
     <canvas
       class:hidden={$page.url.pathname !== '/'}
       class="canvas"
@@ -380,7 +350,7 @@ class:inverted={$page.url.pathname !== '/'}
     font-size: 9.666666vw;
   }
   main {
-    min-height: calc(100dvh - 6rem - 9.666666vw*0.8 - 2.6rem - 2.1rem) !important;
+    min-height: calc(100svh - 6rem - 9.666666vw*0.8 - 2.6rem - 2.1rem) !important;
   }
 }
 @media screen and (max-width: 900px) {
@@ -416,8 +386,12 @@ header {
   padding: var(--gutter);
 }
 h1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   width: 100%;
 }
 h2 {
@@ -427,13 +401,22 @@ h2 {
   text-align: justify;
 }
 nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   gap: .3em;
 }
 .homepage {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   position: absolute;
   height: calc(100% - var(--gutter)*2 - 5px);
 }
@@ -455,6 +438,8 @@ nav {
   height: calc(100vh - var(--gutter)*2);
 }
 .drawing-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   gap: .3em;
   z-index: 3;
@@ -473,15 +458,17 @@ nav {
   top: 0;
   z-index: 1;
   width: 100dvw;
-  height: 100dvh;
-  object-fit: contain;
+  height: 100svh;
+  -o-object-fit: contain;
+     object-fit: contain;
   padding: 4vw 4vh;
   pointer-events: none;
 }
 .canvas {
   position: absolute;
   top: 0;
-  touch-action: none;
+  -ms-touch-action: none;
+      touch-action: none;
 }
 .canvas.hidden {
   display: none;
@@ -490,11 +477,15 @@ nav {
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   text-align: center;
   z-index: 2;
 }
 .controls label {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   gap: 1em;
   padding: .3em 0 .3em 1em;
@@ -505,10 +496,15 @@ nav {
   background-color: var(--color1);
 }
 main {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   position: relative;
-  flex-direction: column;
-  min-height: calc(100dvh - 6rem - 7.25rem*0.8 - 2.6rem - 2.1rem);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: calc(100svh - 6rem - 7.25rem*0.8 - 2.6rem - 2.1rem);
   padding: var(--gutter);
 }
 .rsvp-container {
@@ -520,12 +516,24 @@ main {
   pointer-events: none;
   margin: 0 var(--gutter);
 }
-@keyframes rotate {
+@-webkit-keyframes rotate {
   0% {
-    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
   100% {
-    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
   }
 }
 .rsvp {
@@ -536,9 +544,11 @@ main {
   width: 4em;
   height: 4em;
   text-align: center;
-  align-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
   z-index: 1;
-  animation: rotate 8s linear infinite;
+  -webkit-animation: rotate 8s linear infinite;
+          animation: rotate 8s linear infinite;
   pointer-events: all;
 }
 .inverted.rsvp {
@@ -546,12 +556,14 @@ main {
   background-color: var(--color1);
 }
 .rsvp:hover {
-  animation-play-state: paused;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
   color: var(--color1);
   background-color: var(--color2);
 }
 .inverted.rsvp:hover {
-  animation-play-state: paused;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
   color: var(--color2);
   background-color: var(--color1);
 }
@@ -560,9 +572,11 @@ main {
     padding: calc(var(--gutter)*2) 0;
   }
   main {
-    min-height: calc(100dvh - 8rem - 18vw*0.8*2 - 2.6rem - 2.7rem + 2px);
+    min-height: calc(100svh - 8rem - 18vw*0.8*2 - 2.6rem - 2.7rem + 2px);
     padding: 0;
-    justify-content: flex-end;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
   }
   .homepage>div:nth-child(1) {
     margin-top: auto;
@@ -585,7 +599,8 @@ main {
     margin: var(--gutter);
     width: -webkit-fill-available;
     height: auto;
-    animation: none;
+    -webkit-animation: none;
+            animation: none;
     padding: .3em 1em;
   }
   .homepage .rsvp {
@@ -593,20 +608,22 @@ main {
     margin-bottom: calc(var(--gutter)*2);
   }
   .rsvp.info {
-    top: calc(100dvh - 1.9em - var(--gutter)*2) !important;
+    top: calc(100svh - 1.9em - var(--gutter)*2) !important;
     margin-bottom: calc(var(--gutter)*2);
   }
   .rsvp.draw {
     position: sticky;
-    top: calc(100dvh - 1.9em - var(--gutter)*2) !important;
+    top: calc(100svh - 1.9em - var(--gutter)*2) !important;
     right: 0 !important;
     left: unset;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
     margin-left: auto;
     margin: 0 calc(var(--gutter)) calc(var(--gutter)*2) auto;
   }
   .drawing {
-    height: 100dvh;
+    height: 100svh;
     padding: var(--gutter);
   }
   .drawing-buttons.bottom {
@@ -614,7 +631,9 @@ main {
   }
   .drawing-dots {
     padding: var(--gutter);
-    transform: translateY(-5vh);
+    -webkit-transform: translateY(-5vh);
+        -ms-transform: translateY(-5vh);
+            transform: translateY(-5vh);
   }
   :global(.alert) {
     width: 80%;
@@ -637,13 +656,17 @@ main {
 /* Footer */
 footer {
   width: 100%;
+  display: -ms-grid;
   display: grid;
+  -ms-grid-columns: 1fr var(--gutter) 1fr var(--gutter) 1fr var(--gutter) 1fr;
   grid-template-columns: repeat(4, 1fr);
   gap: var(--gutter);
   color: var(--color1);
   background-color: var(--color2);
   padding: var(--gutter);
-  align-items: last baseline;
+  -webkit-box-align: last baseline;
+      -ms-flex-align: last baseline;
+          align-items: last baseline;
 }
 footer svg {
   fill: var(--color2);
@@ -655,11 +678,17 @@ footer svg.inverted {
   background-color: unset;
 }
 footer div:nth-child(2) {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
   grid-column: 2 / span 2;
 }
 footer div:nth-child(3) {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: flex-end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   gap: 1rem;
 }
 footer a:hover {
@@ -667,10 +696,17 @@ footer a:hover {
 }
 @media screen and (max-width: 900px) {
   footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-content: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-line-pack: start;
+        align-content: flex-start;
     padding-top: 4rem;
     padding-bottom: 4rem;
   }

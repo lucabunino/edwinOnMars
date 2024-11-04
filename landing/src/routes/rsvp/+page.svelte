@@ -125,13 +125,13 @@ $effect(() => {
           Invia
         </button>
         {#if formResponse?.success === true}
-          <p class="alert text-xs form-response">Inviato</p>
+          <p class="alert btn inverted text-xs form-response">Inviato</p>
         {:else if formResponse?.success === false && formResponse?.empty}
-          <p class="alert text-xs form-response">Campi mancanti: {formResponse.emptyFields.join(', ')}</p>
+          <p class="alert btn inverted text-xs form-response">Campi mancanti: {formResponse.emptyFields.join(', ')}</p>
         {:else if formResponse?.success === false && !formResponse.empty}
-          <p class="alert text-xs form-response">Errore al momento dell’invio. Riprova.</p>
+          <p class="alert btn inverted text-xs form-response">Errore al momento dell’invio. Riprova.</p>
         {:else if isSubmitting}
-          <p class="alert text-xs form-response">Invio in corso</p>
+          <p class="alert btn inverted text-xs form-response">Invio in corso</p>
         {/if}
       </div>
       <div class="text-xs checkbox-container">
