@@ -4,13 +4,13 @@ export const load = async () => {
   const colorPairs = [
     ['#FFFBC1', '#BA5826', '/drawings/1.svg', '/drawings/1-mobile.svg',
      '/img/chair.webp', 'max-width: 45vw; max-height: 70vh; bottom: var(--gutter); right: 10vw',
-     '/img/chair-mobile.webp','max-width: 90vw; max-height: 50vh; top: 47%; left: 50%; transform: translate(-50%, -50%)'],
+     '/img/chair-mobile.webp','max-width: 90vw; max-height: 40vh; top: 47%; left: 50%; transform: translate(-50%, -50%)'],
     ['#10069F', '#FFFBC1', '/drawings/2.svg', '/drawings/2-mobile.svg',
      '/img/table.webp', 'max-width: 45vw; max-height: 70vh; bottom: 5vh; right: 10vw',
-     '/img/table.webp','max-width: 75vw; max-height: 50vh; top: 48%; left: 50%; transform: translate(-50%, -50%)'],
+     '/img/table.webp','max-width: 75vw; max-height: 34vh; top: 43%; left: 50%; transform: translate(-50%, -50%)'],
     ['#FFFBC1', '#10069F', '/drawings/3.svg', '/drawings/3-mobile.svg',
      '/img/armchair.webp', 'max-width: 50vw; max-height: 75vh; bottom: var(--gutter); right: 10vw',
-     '/img/armchair.webp','max-width: 90vw; max-height: 50vh; top: 47%; left: 50%; transform: translate(-50%, -50%)'],
+     '/img/armchair.webp','max-width: 90vw; max-height: 37vh; top: 44%; left: 50%; transform: translate(-50%, -50%)'],
   ];
 
   // Randomly select a color pair

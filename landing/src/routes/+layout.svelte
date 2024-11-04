@@ -59,10 +59,8 @@ const stopDrawing = () => {
 const resetDrawing = () => {
   drawingSaved = false
   if (context) {
-      // Clear the entire canvas
       context.reset()
-
-      // Refill the background color to color2
+      
       context.fillStyle = data.color2;
       context.fillRect(0, 0, innerWidth, innerHeight);
   }
@@ -198,7 +196,7 @@ class:inverted={$page.url.pathname !== '/'}
 {/if}
 
   <main>
-    {#if $page.url.pathname !== '/rsvp'}
+    {#if $page.url.pathname !== '/rsvp' && $page.url.pathname !== '/privacy' && $page.url.pathname !== '/terms'}
       <div class="rsvp-container desktop-only">
         <a class="rsvp btn active" class:invisible={!loaded} href="/rsvp" class:inverted={$page.url.pathname === '/info'} class:info={$page.url.pathname === '/info'} class:draw={drawable} style="top: {innerWidth < 901 ? innerHeight - ctaHeight - 70 : ''}px; display:{innerWidth < 901 && $page.url.pathname === '/' && !drawable ? 'none' : ''}"
         onclick={async () => {
@@ -304,7 +302,7 @@ class:inverted={$page.url.pathname !== '/'}
         <p>Art Director: Pietro Vitali</p>
         <p>Visual Merchandiser: Carlos Valencia</p>
         <p>Art Curator: Cecilia Gaetarelli</p>
-        <p>Graphic design & Development: Giulia Benedetti, Luca Bunino</p>
+        <p>Graphic design & Development:<br>Giulia Benedetti, Luca Bunino</p>
         <p>PR: GC Agency</p>
         <p>Illustrazioni: Giulia Baraldi, Silvia Cannella, Paola Carta</p>
       </div>
@@ -621,10 +619,10 @@ main {
 }
 @media screen and (max-width: 900px) {
   h2 {
-    padding: calc(var(--gutter)*2) 0;
+    padding: calc(var(--gutter)*1.5) 0 calc(var(--gutter)*2);
   }
   main {
-    min-height: calc(100svh - 8rem - 18vw*0.8*2 - 2.6rem - 2.7rem + 2px);
+    min-height: calc(100svh - 7.5rem - 18vw*0.8*2 - 2.6rem - 2.7rem + 2px);
     padding: 0;
     -webkit-box-pack: end;
         -ms-flex-pack: end;
@@ -696,7 +694,7 @@ main {
     bottom: calc(var(--gutter)*4 + 2.8rem);
     width: -webkit-fill-available;
   }
-  .drawing-buttons button {
+  .drawing-buttons.bottom button {
     width: calc(50% - var(--gutter)/2 - 4px);
   }
   .rsvp.draw {
