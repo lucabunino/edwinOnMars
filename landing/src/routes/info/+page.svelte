@@ -8,18 +8,22 @@
     <p>Ig: <a href="#">@edwinonmars</a></p>
   </div>
   <div>
-    <p>Edwin è partito.</p>
+    <!-- <p>Edwin è partito.</p>
     <p>Si è trasferito su Marte. Se n'è andato all'improvviso, abbandonando gran parte dei suoi averi. La sua casa è rimasta sospesa nel tempo, immobile.</p>
-    <p>L'unica spiegazione che ha voluto lasciarci, l'ha scarabocchiata su un foglio, lasciato su un tavolo:</p>
+    <p>L'unica spiegazione che ha voluto lasciarci, l'ha scarabocchiata su un foglio, lasciato su un tavolo:</p> -->
     <p style="margin-top: 1em;">Ogni giorno sulla Terra vengono prodotti una quantità smisurata di oggetti, che si aggiungono alla moltitudine di quelli già esistenti e riempiono ogni angolo del nostro Pianeta.</p>
     <p style="margin-top: 1em;">È per questo motivo che ho deciso di andarmene su Marte, un po' in segno di protesta e un po' per trovare un senso di pace. Ho bisogno di riscoprire la bellezza di poche cose fatte bene e che durano a lungo.</p>
     <p style="margin-top: 1em;">Vi chiedo un unico favore: tutte le mie cose sono a vostra disposizione e, prendendone possesso, eviterete di mettere al mondo altri oggetti e darete valore ai mobili del passato.</p>
     <p style="margin-top: 1em;">Edwin</p>
+    <p style="margin-top: calc(var(--gutter)*10); font-weight: 800; letter-spacing: 0.01em; font-style: italic;">About</p>
+    <p style="margin-top: 1em;">Edwin On Mars è una realtà multiforme che vuole far riscoprire il vero valore delle cose e invitare le persone a circondarsi di cose belle, nella concezione etica ed estetica del termine.</p>
+    <p style="margin-top: 1em;">Attraverso eventi di varia natura, EOM diffonde un approccio alternativo al vivere contemporaneo, toccando i vari aspetti del quotidiano, dagli oggetti di cui ci circondiamo, a ciò che costruiamo, alle scelte che prendiamo tutti i giorni. Contrariamente a quanto ci siamo abituati a pensare, una scelta di vita ecologica non sempre comporta rinunce, sacrifici, privazioni. Al contrario, nonostante il prendersi cura (di sé, degli altri, del pianeta) sia solo una delle tante modalità attraverso cui possiamo agire, spesso si rivela essere la modalità che più eleva i risultati delle nostre azioni, non solo dal punto di vista etico ma anche estetico.</p>
+    <p style="margin-top: 1em;">Per questo primo episodio, EOM parte proprio dalla casa, luogo emblematico della cura, in cui si formano abitudini e in cui si elaborano e si esprimono scelte di vita.</p>
   </div>
 </section>
 <section id="info-collaborations" class="text-s">
   <div>
-    <h4 style="margin-bottom: 1em;">Collaborazioni</h4>
+    <h4 style="margin-bottom: 1em; font-weight: 800; letter-spacing: 0.01em; font-style: italic;">Collaborazioni</h4>
     <div class="collaboration">
       <a target="_blank" href="https://www.instagram.com/circa.antwerp/" class="text-m">Circa Antwerp <sup>↗</sup></a>
       <p>Ceramiche</p>
@@ -38,7 +42,7 @@
     </div>
   </div>
   <div>
-    <h4 style="margin-bottom: 1em;">Rivenditori</h4>
+    <h4 style="margin-bottom: 1em; font-weight: 800; letter-spacing: 0.01em; font-style: italic;">Rivenditori</h4>
     <a target="_blank" href="https://www.instagram.com/_9cento_/" class="text-m reseller">NoveCento <sup>↗</sup></a>
     <a target="_blank" href="https://www.instagram.com/capperidicasa__official/" class="text-m reseller">Capperi Di Casa <sup>↗</sup></a>
     <a target="_blank" href="https://www.instagram.com/casafika.it/" class="text-m reseller">Casafika <sup>↗</sup></a>

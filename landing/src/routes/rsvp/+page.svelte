@@ -7,6 +7,7 @@ let isSubmitting = $state(false);
 let formResponse = $state();
 let innerWidth = $state()
 let innerHeight = $state()
+let showAlert = $state()
 
 import { getCanvas } from '$lib/stores/canvas.svelte.js';
 const canvaser = getCanvas();
@@ -37,7 +38,18 @@ onMount(() => {
   console.log(canvaser.canvas);
 });
 $effect(() => {
-  if (isSubmitted) resetFormStates();
+  if (isSubmitted) {
+    resetFormStates()
+  };
+  if (formResponse?.emptyFields) {
+    showAlert = true
+    console.log("Alert");
+    setTimeout(() => {
+      showAlert = false
+      console.log("no Alert");
+      
+    }, 5000);
+  }
 });
 </script>
 
@@ -126,8 +138,8 @@ $effect(() => {
         </button>
         {#if formResponse?.success === true}
           <p class="alert btn inverted text-xs form-response">Inviato</p>
-        {:else if formResponse?.success === false && formResponse?.empty}
-          <p class="alert btn inverted text-xs form-response">Campi mancanti: {formResponse.emptyFields.join(', ')}</p>
+        {:else if formResponse?.success === false && formResponse?.empty && showAlert}
+          <p class="alert btn inverted text-xs form-response">Mancano alcuni campi obbligatori: {formResponse.emptyFieldsItalian.join(', ')}</p>
         {:else if formResponse?.success === false && !formResponse.empty}
           <p class="alert btn inverted text-xs form-response">Errore al momento dell’invio. Riprova.</p>
         {:else if isSubmitting}
@@ -135,12 +147,12 @@ $effect(() => {
         {/if}
       </div>
       <div class="text-xs checkbox-container">
-        <input type="checkbox" id="policy" name="policy"/>
-        <label for="policy">Dichiaro di sollevare l’Organizzazione da qualsiasi responsabilità, diretta e indiretta, per eventuali danni materiali e non materiali e/o spese (ivi incluse le spese legali), che dovessero derivarmi a seguito della partecipazione all’evento, anche in conseguenza del mio comportamento; dichiaro di assumermi ogni responsabilità che possa derivare dall’esercizio dell’attività in questione e dichiaro di sollevare l’Organizzazione da ogni responsabilità civile e penale, anche oggettiva, in conseguenza di infortuni cagionati a me o a terzi e a malori verificatisi durante l’intera durata dell’evento, nonché di sollevare l’Organizzazione da ogni responsabilità legata a furti e/o danneggiamenti di qualsiasi oggetto personale.</label>
+        <input type="checkbox" id="terms" name="terms" class:empty={formResponse?.emptyFields?.includes('terms')}/>
+        <label for="terms">Accetto i termini e condizioni specificate in <a href="/terms">questa pagina</a>.*</label>
       </div>
       <div class="text-xs checkbox-container">
-        <input type="checkbox" id="treatment" name="treatment"/>
-        <label for="treatment">Autorizzo al trattamento dei dati personali. Preso atto dell’<a href="/privacy">informativa</a> ai sensi del Regolamento Europeo EU/2016/679 sulla protezione dei dati (GDPR) autorizzo il trattamento e la comunicazione all’Organizzazione dei miei dati personali, per le finalità connesse alla realizzazione dell’evento.</label>
+        <input type="checkbox" id="treatment" name="treatment" class:empty={formResponse?.emptyFields?.includes('treatment')}/>
+        <label for="treatment">Autorizzo al trattamento dei dati personali. Preso atto dell’<a href="/privacy">informativa</a> ai sensi del Regolamento Europeo EU/2016/679 sulla protezione dei dati (GDPR) autorizzo il trattamento e la comunicazione all’Organizzazione dei miei dati personali, per le finalità connesse alla realizzazione dell’evento.*</label>
       </div>
       <div class="text-xs checkbox-container">
         <input type="checkbox" id="newsletter" name="newsletter"/>
@@ -223,6 +235,10 @@ input:focus-visible {
 }
 input.empty {
   outline: solid 2px #ff0000;
+}
+input[type="checkbox"].empty {
+  border: solid 2px #ff0000;
+  outline: none;
 }
 .days {
   display: flex;

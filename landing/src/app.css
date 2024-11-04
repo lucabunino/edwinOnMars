@@ -1,9 +1,8 @@
 /* Font import */
 @font-face {
   font-family: SwissNow;
-  src:  url('/fonts/SwissNow-VF.ttf') format("truetype supports variations"),
-        url('/fonts/SwissNow-VF.ttf') format("truetype-variations");
-        /* url('/fonts/SwissNow-Trial-VAR-VF.ttf.woff2') format("woff2-variations"); */
+  src:  url('/fonts/SwissNow-VAR-VF.ttf.woff2') format("truetype supports variations"),
+        url('/fonts/SwissNow-VAR-VF.ttf.woff2') format("truetype-variations");
   /* src:  url('/fonts/SwissNow-Trial-VAR-VF.ttf.woff2') format('woff2'); */
   /* src:  url('/fonts/Automatico_Text-Light.woff') format('woff'); */
   font-weight: 100 1000;
