@@ -5,7 +5,7 @@
     <h3 class="text-m" style="margin-top: 1em;">10am&thinsp;—&thinsp;7pm</h3>
     <p style="margin-top: 1em;">Email: <a href="mailto:info@edwinonmars.com">info@edwinonmars.com</a></p>
     <p>Tel: <a href="tel:+39 339 4729946">+39 339 4729946</a></p>
-    <p>Ig: <a href="#">@edwinonmars</a></p>
+    <p>Ig: <a target="_blank" href="https://www.instagram.com/edwinonmars/">@edwinonmars</a></p>
   </div>
   <div>
     <!-- <p>Edwin è partito.</p>
@@ -43,12 +43,13 @@
   </div>
   <div>
     <h4 style="margin-bottom: 1em; 0.01em; font-style: italic;">Rivenditori</h4>
-    <a target="_blank" href="https://www.instagram.com/_9cento_/" class="text-m reseller">NoveCento <sup>↗</sup></a>
+    <a target="_blank" href="https://www.instagram.com/alpasso_milano/" class="text-m reseller">Al Passo <sup>↗</sup></a>
     <a target="_blank" href="https://www.instagram.com/capperidicasa__official/" class="text-m reseller">Capperi Di Casa <sup>↗</sup></a>
     <a target="_blank" href="https://www.instagram.com/casafika.it/" class="text-m reseller">Casafika <sup>↗</sup></a>
     <a target="_blank" href="https://www.instagram.com/kataniadesign/" class="text-m reseller">Katania Vintage <sup>↗</sup></a>
     <a target="_blank" href="https://www.instagram.com/mitico_gallery/" class="text-m reseller">Mitico Gallery <sup>↗</sup></a>
     <a target="_blank" href="https://www.instagram.com/nostalgye_design/" class="text-m reseller">Nostalgye <sup>↗</sup></a>
+    <a target="_blank" href="https://www.instagram.com/_9cento_/" class="text-m reseller">NoveCento <sup>↗</sup></a>
     <a target="_blank" href="https://www.instagram.com/pota_vintage/" class="text-m reseller">Pota Vintage <sup>↗</sup></a>
     <a target="_blank" href="https://www.instagram.com/safiro.modernariato/" class="text-m reseller">Safiro <sup>↗</sup></a>
   </div>
