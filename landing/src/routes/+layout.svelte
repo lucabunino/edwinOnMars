@@ -295,7 +295,7 @@ class:inverted={$page.url.pathname !== '/'}
         <p style="margin-top: 1.1em;"><a target="_blank" href="https://www.instagram.com/edwinonmars/">@edwinonmars</a></p>
         <p><a href="mailto:info@edwinonmars.com">info@edwinonmars.com</a></p>
         <p>T. <a href="tel:+39 339 4729946">+39 339 4729946</a></p>
-        <p style="margin-top: 2.2em;">P.IVA 01824020190</p>
+        <p style="margin-top: 2.2em;">P. IVA 01824020190</p>
       </div>
       <div>
         <p>Founder & Producer: Vera Salvaderi</p>
@@ -303,7 +303,7 @@ class:inverted={$page.url.pathname !== '/'}
         <p>Art Director: Pietro Vitali</p>
         <p>Visual Merchandiser: Carlos Valencia</p>
         <p>Art Curator: Cecilia Gaetarelli</p>
-        <p>Graphic design & Development:<br>Giulia Benedetti, Luca Bunino</p>
+        <p>Graphic design & Development: Giulia Benedetti, Luca Bunino</p>
         <p>PR: GC Agency</p>
         <p>Illustrazioni: Giulia Baraldi, Silvia Cannella, Paola Carta</p>
       </div>
@@ -684,7 +684,7 @@ main {
     bottom: calc(var(--gutter)*2);
   }
   .drawing-dots {
-    padding: calc(var(--gutter)*6) var(--gutter);
+    padding: calc(var(--gutter)*6) calc(var(--gutter)/2);
   }
   :global(.alert) {
     width: 80%;
