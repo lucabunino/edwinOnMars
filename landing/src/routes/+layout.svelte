@@ -684,7 +684,7 @@ main {
     bottom: calc(var(--gutter)*2);
   }
   .drawing-dots {
-    padding: calc(var(--gutter)*6) calc(var(--gutter)/2);
+    padding: calc(var(--gutter)*7) calc(var(--gutter)/2);
   }
   :global(.alert) {
     width: 80%;
