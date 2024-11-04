@@ -39,7 +39,9 @@ onMount(() => {
 });
 $effect(() => {
   if (isSubmitted) {
-    resetFormStates()
+    setTimeout(() => {
+      resetFormStates()
+    }, 3000);
   };
   if (formResponse?.emptyFields) {
     showAlert = true
@@ -69,7 +71,7 @@ $effect(() => {
         type="text" 
         id="name" 
         name="name" 
-        class:empty={formResponse?.emptyFields?.includes('name')} 
+        class:empty={formResponse?.emptyFields?.includes('name')}
         onclick={() => {if (formResponse?.emptyFields.includes('name')) {
         formResponse.emptyFields = formResponse.emptyFields.filter(field => field !== 'name') 
         }}}>
@@ -136,8 +138,8 @@ $effect(() => {
         <button type="submit" class="text-m submit" onclick={() => isSubmitting = true}>
           Invia
         </button>
-        {#if formResponse?.success === true}
-          <p class="alert btn inverted text-xs form-response">Inviato</p>
+        {#if isSubmitted}
+          <p class="alert btn inverted text-xs form-response">Inviato! Grazie per la pazienza</p>
         {:else if formResponse?.success === false && formResponse?.empty && showAlert}
           <p class="alert btn inverted text-xs form-response">Mancano alcuni campi obbligatori: {formResponse.emptyFieldsItalian.join(', ')}</p>
         {:else if formResponse?.success === false && !formResponse.empty}
@@ -147,11 +149,21 @@ $effect(() => {
         {/if}
       </div>
       <div class="text-xs checkbox-container">
-        <input type="checkbox" id="terms" name="terms" class:empty={formResponse?.emptyFields?.includes('terms')}/>
+        <input type="checkbox" id="terms" name="terms"
+        class:empty={formResponse?.emptyFields?.includes('terms')}
+        onclick={() => {if (formResponse?.emptyFields.includes('name')) {
+          formResponse.emptyFields = formResponse.emptyFields.filter(field => field !== 'terms') 
+        }}}
+        />
         <label for="terms">Accetto i <a href="/terms">termini e condizioni</a>.*</label>
       </div>
       <div class="text-xs checkbox-container">
-        <input type="checkbox" id="treatment" name="treatment" class:empty={formResponse?.emptyFields?.includes('treatment')}/>
+        <input type="checkbox" id="treatment" name="treatment"
+        class:empty={formResponse?.emptyFields?.includes('treatment')}
+        onclick={() => {if (formResponse?.emptyFields.includes('name')) {
+          formResponse.emptyFields = formResponse.emptyFields.filter(field => field !== 'treatment') 
+        }}}
+        />
         <label for="treatment">Autorizzo al trattamento dei dati personali. Preso atto dell’<a href="/privacy">informativa</a> ai sensi del Regolamento Europeo EU/2016/679 sulla protezione dei dati (GDPR) autorizzo il trattamento e la comunicazione all’Organizzazione dei miei dati personali, per le finalità connesse alla realizzazione dell’evento.*</label>
       </div>
       <div class="text-xs checkbox-container">

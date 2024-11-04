@@ -48,7 +48,7 @@ export const actions = {
   create: async ({ request }) => {
     try {
       const formData = await request.formData();
-      const fields = ['name', 'surname', 'email', 'treatment', 'terms'];
+      const fields = ['name', 'surname', 'email', 'terms', 'treatment'];
       const data = Object.fromEntries(fields.map(field => [field, formData.get(field)]));
       const emptyFields = fields.filter(field => !data[field]);
       const wrongFields = [];
@@ -104,28 +104,46 @@ export const actions = {
         subject: `Edwin on Mars | RSVP`,
         text: `Thank you ${data.name} ${data.surname}! We received your RSVP`,
         html: `
-          <p>Ciao ${data.name}! La tua registrazione è avvenuta con successo. Ti aspettiamo a casa di Edwin!</p>
+          <p>Ciao ${data.name}! La tua registrazione è avvenuta con successo. Ti aspettiamo a casa di Edwin!<br>
+          Avrai la possibilità di visitare l'esposizione e di acquistare i migliori pezzi di Design del Novecento.</p>
           <p>Hai prenotato nei seguenti giorni e orari:</p>
           ${daysText}
+          <p style="margin-top: 4rem">Edwin on Mars | 20<sup>th</sup> Century Design Sale<br>
+          <a href="mailto:info@edwinonmars.com">info@edwinonmars.com</a><br>
+          <a href="https://www.edwinonmars.com/" target="_blank">edwinonmars.com</a><br>
+          <a href="tel:+393394729946">+39 339 4729946</a>
+          </p>
         `
       };
 
       const mailToEdwin = {
         from: EMAIL,
-        to: "hello@lucabunino.com",
+        to: "edwin@edwinonmars.com",
+        cc: "verasalvaderi@gmail.com",
         subject: `Edwin on Mars | RSVP from ${data.name} ${data.surname}`,
         text: `RSVP from: ${data.name} ${data.surname}, email: ${data.email}`,
         html: `<p>RSVP from: ${data.name} ${data.surname}, <a href="mailto:${data.email}">${data.email}</a></p>
         ${daysText}`
       };
 
+      // &entry.995808819=Mattina&entry.995808819=Pomeriggio
+      // &entry.1875554341=Mattina&entry.1875554341=Pomeriggio
+      // &entry.777170711=Mattina&entry.777170711=Pomeriggio
+      // const googleFormLink = `https://docs.google.com/forms/d/e/1FAIpQLSexBuAIYTDyYchx0bOqvO6AYcrHR0BkQ-o-nVhdRAyvr67xQQ/formResponse?usp=pp_url&entry.357710031=${data.name}&entry.1181668538=${data.surname}&entry.1561570609=${data.email}${days}&entry.2008983739=Terms&entry.2008983739=Treatment${newsletter}&submit=Submit`;
+
       // Construct the Google Form link with selected days
-      const days = Object.keys(dayMappings).flatMap(day => [
-        formData.get(`${day}-morning`) ? `&entry.${day}_morning=${formData.get(`${day}-morning`)}` : '',
-        formData.get(`${day}-afternoon`) ? `&entry.${day}_afternoon=${formData.get(`${day}-afternoon`)}` : ''
-      ]).join('');
-      const newsletter = formData.get('newsletter') ? '&entry.2008983739=Newsletter' : '';
-      const googleFormLink = `https://docs.google.com/forms/d/e/1FAIpQLSexBuAIYTDyYchx0bOqvO6AYcrHR0BkQ-o-nVhdRAyvr67xQQ/formResponse?usp=pp_url&entry.357710031=${data.name}&entry.1181668538=${data.surname}&entry.1561570609=${data.email}${days}&entry.2008983739=Terms&entry.2008983739=Treatment${newsletter}&submit=Submit`;
+      const days = Object.keys(dayMappings).flatMap(day => {
+        const morningEntry = day === 'fri' ? '995808819' : day === 'sat' ? '1875554341' : day === 'sun' ? '777170711' : '';
+        const afternoonEntry = morningEntry; // same entry for morning and afternoon based on day
+        
+        return [
+          formData.get(`${day}-morning`) ? `&entry.${morningEntry}=Mattina` : '',
+          formData.get(`${day}-afternoon`) ? `&entry.${afternoonEntry}=Pomeriggio` : ''
+        ];
+      }).join('');
+
+      const newsletter = formData.get('newsletter') ? '&entry.290802433=Newsletter' : '';
+      const googleFormLink = `https://docs.google.com/forms/d/e/1FAIpQLSeXrwWxTV3Y-z-I5qgpiNQmaYIJabfcbiOH9IshVMeErdomYQ/formResponse?usp=pp_url&entry.1218289056=${data.name}&entry.1692120188=${data.surname}&entry.1602480910=${data.email}${days}&entry.290802433=Terms&entry.290802433=Treatment${newsletter}&submit=Submit`;      
 
       const sendTasks = [
         fetch(googleFormLink),

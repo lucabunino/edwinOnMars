@@ -63,7 +63,7 @@ const resetDrawing = () => {
       context.reset()
 
       // Refill the background color to color2
-      context.fillStyle = color2;
+      context.fillStyle = data.color2;
       context.fillRect(0, 0, canvas.width, canvas.height);
   }
   console.log('reset');
@@ -255,7 +255,7 @@ class:inverted={$page.url.pathname !== '/'}
             </button>
             {/if}
             {#if drawingSaved}
-              <p class="alert btn">Salvato, Vai all'RSVP! Per ricominciare o perfezionare il disegno, clicca su “ricomincia” o “sovrascrivi” dopo le modifiche.</p>
+              <p class="alert btn">Disegno salvato. Vai all'RSVP!<br>Per ricominciare il disegno, clicca su “ricomincia”. Puoi salvare una nuova versione cliccando su “sovrascrivi”.</p>
             {/if}
             <!-- <div class="controls">
               <label>
@@ -589,7 +589,9 @@ main {
 }
 .rsvp {
   position: sticky;
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 0;
   top: calc(100vh - 4em - var(--gutter));
   width: 4em;
@@ -762,17 +764,7 @@ footer a:hover {
 }
 @media screen and (max-width: 900px) {
   footer {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -ms-flex-line-pack: start;
-        align-content: flex-start;
+    display: block;
     padding-top: 4rem;
     padding-bottom: 4rem;
   }
