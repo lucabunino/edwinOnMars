@@ -2,40 +2,51 @@
   <div>
     <h3 class="text-m">Fri 29.11&thinsp;—&thinsp;Sun 1.12</h3>
     <h3 class="text-m">Viale Ortles 88/A, Milano</h3>
-    <h3 class="text-m">10am&thinsp;—&thinsp;7pm</h3>
+    <h3 class="text-m" style="margin-top: 1em;">10am&thinsp;—&thinsp;7pm</h3>
+    <p style="margin-top: 1em;">Email: <a href="mailto:info@edwinonmars.com">info@edwinonmars.com</a></p>
+    <p>Tel: <a href="tel:+39 339 4729946">+39 339 4729946</a></p>
+    <p>Ig: <a href="#">@edwinonmars</a></p>
   </div>
   <div>
-    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-    <p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages.</p>
-    <p>Ig: <a href="#">@edwinonmars</a></p>
-    <p>Email: <a href="mailto:info@edwinonmars.com">info@edwinonmars.com</a></p>
-    <p>Tel: <a href="tel:+39 345 8591006">+39 345 8591006</a></p>
+    <p>Edwin è partito.</p>
+    <p>Si è trasferito su Marte. Se n'è andato all'improvviso, abbandonando gran parte dei suoi averi. La sua casa è rimasta sospesa nel tempo, immobile.</p>
+    <p>L'unica spiegazione che ha voluto lasciarci, l'ha scarabocchiata su un foglio, lasciato su un tavolo:</p>
+    <p style="margin-top: 1em;">Ogni giorno sulla Terra vengono prodotti una quantità smisurata di oggetti, che si aggiungono alla moltitudine di quelli già esistenti e riempiono ogni angolo del nostro Pianeta.</p>
+    <p style="margin-top: 1em;">È per questo motivo che ho deciso di andarmene su Marte, un po' in segno di protesta e un po' per trovare un senso di pace. Ho bisogno di riscoprire la bellezza di poche cose fatte bene e che durano a lungo.</p>
+    <p style="margin-top: 1em;">Vi chiedo un unico favore: tutte le mie cose sono a vostra disposizione e, prendendone possesso, eviterete di mettere al mondo altri oggetti e darete valore ai mobili del passato.</p>
+    <p style="margin-top: 1em;">Edwin</p>
   </div>
 </section>
 <section id="info-collaborations" class="text-s">
   <div>
-    <h4>Collaborazioni</h4>
+    <h4 style="margin-bottom: 1em;">Collaborazioni</h4>
     <div class="collaboration">
-      <a href="#" class="text-m">Reading Room ↗</a>
-      <p>Magazines e libri in esposizione</p>
+      <a target="_blank" href="https://www.instagram.com/circa.antwerp/" class="text-m">Circa Antwerp <sup>↗</sup></a>
+      <p>Ceramiche</p>
     </div>
     <div class="collaboration">
-      <a href="#" class="text-m">Viola Limone ↗</a>
-      <p>Set design e tableware</p>
+      <a target="_blank" href="https://www.instagram.com/byreadingroom/" class="text-m">Reading Room <sup>↗</sup></a>
+      <p>Giornali e riviste</p>
     </div>
     <div class="collaboration">
-      <a href="#" class="text-m">Zazie ↗</a>
-      <p>Selezione di vini</p>
+      <a target="_blank" href="https://www.instagram.com/verderame_milano/" class="text-m">Verderame <sup>↗</sup></a>
+      <p>Fiori e piante</p>
+    </div>
+    <div class="collaboration">
+      <a target="_blank" href="https://www.instagram.com/violalimone_/" class="text-m">Violalimone <sup>↗</sup></a>
+      <p>Tableware</p>
     </div>
   </div>
   <div>
-    <h4>Rivenditori</h4>
-    <a href="#" class="text-m reseller">Vintage Design ↗</a>
-    <a href="#" class="text-m reseller">Amodo Modernariato ↗</a>
-    <a href="#" class="text-m reseller">Rigotondo Modernariato ↗</a>
-    <a href="#" class="text-m reseller">Mid Century Store ↗</a>
-    <a href="#" class="text-m reseller">Le Decorose ↗</a>
-    <a href="#" class="text-m reseller">Antic Modernariato ↗</a>
+    <h4 style="margin-bottom: 1em;">Rivenditori</h4>
+    <a target="_blank" href="https://www.instagram.com/_9cento_/" class="text-m reseller">NoveCento <sup>↗</sup></a>
+    <a target="_blank" href="https://www.instagram.com/capperidicasa__official/" class="text-m reseller">Capperi Di Casa <sup>↗</sup></a>
+    <a target="_blank" href="https://www.instagram.com/casafika.it/" class="text-m reseller">Casafika <sup>↗</sup></a>
+    <a target="_blank" href="https://www.instagram.com/kataniadesign/" class="text-m reseller">Katania Vintage <sup>↗</sup></a>
+    <a target="_blank" href="https://www.instagram.com/mitico_gallery/" class="text-m reseller">Mitico Gallery <sup>↗</sup></a>
+    <a target="_blank" href="https://www.instagram.com/nostalgye_design/" class="text-m reseller">Nostalgye <sup>↗</sup></a>
+    <a target="_blank" href="https://www.instagram.com/pota_vintage/" class="text-m reseller">Pota Vintage <sup>↗</sup></a>
+    <a target="_blank" href="https://www.instagram.com/safiro.modernariato/" class="text-m reseller">Safiro <sup>↗</sup></a>
   </div>
 </section>
 
@@ -44,11 +55,32 @@ section {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: var(--gutter);
+  margin-bottom: calc(var(--gutter)*10);
 }
-section + section {
-  margin-top: calc(var(--gutter)*10);
+.collaboration:not(:last-of-type) {
+  margin-bottom: 1em;
 }
 .reseller {
   display: block;
+}
+sup {
+  font-size: .5em;
+  font-weight: 700;
+}
+a:hover {
+  text-decoration: underline;
+}
+@media screen and (max-width: 900px) {
+  section {
+    padding: var(--gutter);
+    grid-template-columns: repeat(1, 1fr);
+    margin-bottom: calc(var(--gutter)*4);
+  }
+  #info-collaborations {
+    gap: calc(var(--gutter)*6);
+  }
+  section:last-of-type {
+    margin-bottom: calc(var(--gutter)*10);
+  }
 }
 </style>
