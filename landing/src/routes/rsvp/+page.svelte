@@ -148,7 +148,7 @@ $effect(() => {
       </div>
       <div class="text-xs checkbox-container">
         <input type="checkbox" id="terms" name="terms" class:empty={formResponse?.emptyFields?.includes('terms')}/>
-        <label for="terms">Accetto i termini e condizioni specificate in <a href="/terms">questa pagina</a>.*</label>
+        <label for="terms">Accetto i <a href="/terms">termini e condizioni</a>.*</label>
       </div>
       <div class="text-xs checkbox-container">
         <input type="checkbox" id="treatment" name="treatment" class:empty={formResponse?.emptyFields?.includes('treatment')}/>
