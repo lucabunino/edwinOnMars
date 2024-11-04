@@ -39,8 +39,9 @@ onMount(() => {
 });
 $effect(() => {
   if (isSubmitted) {
+    resetFormStates()
     setTimeout(() => {
-      resetFormStates()
+      isSubmitted = false
     }, 3000);
   };
   if (formResponse?.emptyFields) {
