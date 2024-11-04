@@ -303,8 +303,8 @@ class:inverted={$page.url.pathname !== '/'}
         <p>Art Director: Pietro Vitali</p>
         <p>Visual Merchandiser: Carlos Valencia</p>
         <p>Art Curator: Cecilia Gaetarelli</p>
-        <p>Graphic design & Development: Giulia Benedetti, Luca Bunino</p>
-        <p>PR: GC Agency</p>
+        <p>Graphic design & Development: <a href="https://giuliabenedetti.eu/" target="_blank">Giulia Benedetti</a>, <a href="https://lucabunino.com/" target="_blank">Luca Bunino</a></p>
+        <p>PR: <a href="https://www.gcagency.it/" target="_blank">GC Agency</a></p>
         <p>Illustrazioni: Giulia Baraldi, Silvia Cannella, Paola Carta</p>
       </div>
       <div>
