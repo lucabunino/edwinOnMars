@@ -8,9 +8,6 @@
     <p>Ig: <a target="_blank" href="https://www.instagram.com/edwinonmars/">@edwinonmars</a></p>
   </div>
   <div>
-    <!-- <p>Edwin è partito.</p>
-    <p>Si è trasferito su Marte. Se n'è andato all'improvviso, abbandonando gran parte dei suoi averi. La sua casa è rimasta sospesa nel tempo, immobile.</p>
-    <p>L'unica spiegazione che ha voluto lasciarci, l'ha scarabocchiata su un foglio, lasciato su un tavolo:</p> -->
     <p style="margin-top: 1em;">Ogni giorno sulla Terra vengono prodotti una quantità smisurata di oggetti, che si aggiungono alla moltitudine di quelli già esistenti e riempiono ogni angolo del nostro Pianeta.</p>
     <p style="margin-top: 1em;">È per questo motivo che ho deciso di andarmene su Marte, un po' in segno di protesta e un po' per trovare un senso di pace. Ho bisogno di riscoprire la bellezza di poche cose fatte bene e che durano a lungo.</p>
     <p style="margin-top: 1em;">Vi chiedo un unico favore: tutte le mie cose sono a vostra disposizione e, prendendone possesso, eviterete di mettere al mondo altri oggetti e darete valore ai mobili del passato.</p>

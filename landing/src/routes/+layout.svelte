@@ -64,7 +64,7 @@ const resetDrawing = () => {
 
       // Refill the background color to color2
       context.fillStyle = data.color2;
-      context.fillRect(0, 0, canvas.width, canvas.height);
+      context.fillRect(0, 0, innerWidth, innerHeight);
   }
   console.log('reset');
   
