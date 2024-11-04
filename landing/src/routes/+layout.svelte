@@ -196,7 +196,7 @@ class:inverted={$page.url.pathname !== '/'}
 {/if}
 
   <main>
-    {#if $page.url.pathname === '/' && $page.url.pathname === '/info'}
+    {#if $page.url.pathname === '/' || $page.url.pathname === '/info'}
       <div class="rsvp-container">
         <a class="rsvp btn active" class:invisible={!loaded} href="/rsvp" class:inverted={$page.url.pathname === '/info'} class:info={$page.url.pathname === '/info'} class:draw={drawable} style="top: {innerWidth < 901 ? innerHeight - ctaHeight - 70 : ''}px; display:{innerWidth < 901 && $page.url.pathname === '/' && !drawable ? 'none' : ''}"
         onclick={async () => {

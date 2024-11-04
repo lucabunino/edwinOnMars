@@ -1,18 +1,18 @@
 <section id="info-general" class="text-s">
   <div>
     <h3 class="text-m">Fri 29.11&thinsp;—&thinsp;Sun 1.12</h3>
+    <h3 class="text-m">10am&thinsp;—&thinsp;7pm</h3>
     <h3 class="text-m">Viale Ortles 88/A, Milano</h3>
-    <h3 class="text-m" style="margin-top: 1em;">10am&thinsp;—&thinsp;7pm</h3>
-    <p style="margin-top: 1em;">Email: <a href="mailto:info@edwinonmars.com">info@edwinonmars.com</a></p>
-    <p>Tel: <a href="tel:+39 339 4729946">+39 339 4729946</a></p>
-    <p>Ig: <a target="_blank" href="https://www.instagram.com/edwinonmars/">@edwinonmars</a></p>
+    <p style="margin-top: 1em;"><a target="_blank" href="https://www.instagram.com/edwinonmars/">@edwinonmars</a></p>
+    <p><a href="mailto:info@edwinonmars.com">info@edwinonmars.com</a></p>
+    <p>T. <a href="tel:+39 339 4729946">+39 339 4729946</a></p>
   </div>
   <div>
-    <p style="margin-top: 1em;">Ogni giorno sulla Terra vengono prodotti una quantità smisurata di oggetti, che si aggiungono alla moltitudine di quelli già esistenti e riempiono ogni angolo del nostro Pianeta.</p>
+    <p>Ogni giorno sulla Terra vengono prodotti una quantità smisurata di oggetti, che si aggiungono alla moltitudine di quelli già esistenti e riempiono ogni angolo del nostro Pianeta.</p>
     <p style="margin-top: 1em;">È per questo motivo che ho deciso di andarmene su Marte, un po' in segno di protesta e un po' per trovare un senso di pace. Ho bisogno di riscoprire la bellezza di poche cose fatte bene e che durano a lungo.</p>
     <p style="margin-top: 1em;">Vi chiedo un unico favore: tutte le mie cose sono a vostra disposizione e, prendendone possesso, eviterete di mettere al mondo altri oggetti e darete valore ai mobili del passato.</p>
     <p style="margin-top: 1em;">Edwin</p>
-    <p style="margin-top: calc(var(--gutter)*10); 0.01em; font-style: italic;">About</p>
+    <p class="mt" style="font-style: italic;">About</p>
     <p style="margin-top: 1em;">Edwin On Mars è una realtà multiforme che vuole far riscoprire il vero valore delle cose e invitare le persone a circondarsi di cose belle, nella concezione etica ed estetica del termine.</p>
     <p style="margin-top: 1em;">Attraverso eventi di varia natura, EOM diffonde un approccio alternativo al vivere contemporaneo, toccando i vari aspetti del quotidiano, dagli oggetti di cui ci circondiamo, a ciò che costruiamo, alle scelte che prendiamo tutti i giorni. Contrariamente a quanto ci siamo abituati a pensare, una scelta di vita ecologica non sempre comporta rinunce, sacrifici, privazioni. Al contrario, nonostante il prendersi cura (di sé, degli altri, del pianeta) sia solo una delle tante modalità attraverso cui possiamo agire, spesso si rivela essere la modalità che più eleva i risultati delle nostre azioni, non solo dal punto di vista etico ma anche estetico.</p>
     <p style="margin-top: 1em;">Per questo primo episodio, EOM parte proprio dalla casa, luogo emblematico della cura, in cui si formano abitudini e in cui si elaborano e si esprimono scelte di vita.</p>
@@ -53,6 +53,9 @@
 </section>
 
 <style>
+.mt {
+  margin-top: calc(var(--gutter)*10);
+}
 section {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -73,6 +76,9 @@ a:hover {
   text-decoration: underline;
 }
 @media screen and (max-width: 900px) {
+  .mt {
+    margin-top: calc(var(--gutter)*6);
+  }
   section {
     padding: var(--gutter);
     grid-template-columns: repeat(1, 1fr);
