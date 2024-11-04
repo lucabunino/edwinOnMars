@@ -222,7 +222,8 @@ class:inverted={$page.url.pathname !== '/'}
           <a class="rsvp btn active" class:invisible={!loaded} href="/rsvp" class:info={$page.url.pathname === '/info'} class:draw={drawable}
           style="top: unset; display:{innerWidth > 900 && $page.url.pathname === '/' ? 'none' : ''}">RSVP</a>
           <div bind:clientHeight={ctaHeight}>
-            <p class="text-xs">Vuoi disegnare tu? Clicca qui sotto e entra nella modalità disegno. Tieni premuto per unire i puntini. Una volta salvato, il disegno ti verrà inviato insieme alla conferma di avvenuta ricezione dell’RSVP.</p>
+            <p class="text-xs desktop-only">Vuoi disegnare tu? Clicca qui sotto e entra nella modalità disegno. Tieni premuto per unire i puntini. Una volta salvato, il disegno ti verrà inviato insieme alla conferma di avvenuta ricezione dell’RSVP.</p>
+            <p class="text-xs mobile-only">Puoi disegnare anche tu un oggetto! Unisci i puntini e rispondi all'RSVP per riceverlo.</p>
             <button class="btn btn-mobile" onclick={() => drawable = true}>Disegna</button>
           </div>
         </div>

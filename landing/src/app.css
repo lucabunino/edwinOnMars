@@ -63,11 +63,14 @@ sup {
   font-weight: 400;
   letter-spacing: -0.04em;
 }
+.mobile-only {
+  display: none;
+}
 @media screen and (max-width: 900px) {
-  /* :root{
-    --gutter: 1.5rem;
+  .mobile-only {
+    display: inherit;
   }
-  body {
-    font-size: 1.2rem;
-  } */
+  .desktop-only {
+    display: none;
+  }
 }
