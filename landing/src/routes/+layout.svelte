@@ -188,8 +188,7 @@ const generateBlob = async (canvas) => {
 </svelte:head>
 
 <svelte:window onkeyup={handleKey} bind:scrollY bind:innerHeight bind:innerWidth></svelte:window>
-
-{#if $page.url.host !== 'edwinonmars.com'}
+{#if $page.url.host !== 'edwinonmars'}
   {#if viewGrid}
     <div id="layout" style="pointer-events:none;display: grid;position:fixed; z-index:999;width: -moz-available;width: -webkit-fill-available;height: -moz-available;height: -webkit-fill-available;grid-template-columns: repeat(12, 1fr);margin:var(--gutter);gap:var(--gutter);opacity:.2;"><div style="background-color:red"></div><div style="background-color:red"></div><div style="background-color:red"></div><div style="background-color:red"></div><div style="background-color:red"></div><div style="background-color:red"></div><div style="background-color:red"></div><div style="background-color:red"></div><div style="background-color:red"></div><div style="background-color:red"></div><div style="background-color:red"></div><div style="background-color:red"></div></div>
     <style>@media only screen and (max-width: 800px) {#layout {grid-template-columns: repeat(6, 1fr) !important} #layout>div:nth-child(even) {display:none}}</style>
