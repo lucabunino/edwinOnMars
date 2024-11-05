@@ -46,7 +46,6 @@
     <a target="_blank" href="https://www.instagram.com/kataniadesign/" class="text-m reseller">Katania Vintage <sup>↗</sup></a>
     <a target="_blank" href="https://www.instagram.com/mitico_gallery/" class="text-m reseller">Mitico Gallery <sup>↗</sup></a>
     <a target="_blank" href="https://www.instagram.com/nostalgye_design/" class="text-m reseller">Nostalgye <sup>↗</sup></a>
-    <a target="_blank" href="https://www.instagram.com/_9cento_/" class="text-m reseller">NoveCento <sup>↗</sup></a>
     <a target="_blank" href="https://www.instagram.com/pota_vintage/" class="text-m reseller">Pota Vintage <sup>↗</sup></a>
     <a target="_blank" href="https://www.instagram.com/safiro.modernariato/" class="text-m reseller">Safiro <sup>↗</sup></a>
   </div>
