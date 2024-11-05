@@ -104,11 +104,12 @@ export const actions = {
         subject: `Edwin on Mars | RSVP`,
         text: `Thank you ${data.name} ${data.surname}! We received your RSVP`,
         html: `
-          <p>Ciao ${data.name}! La tua registrazione è avvenuta con successo. Ti aspettiamo a casa di Edwin in viale Ortles 88/A, Milano!<br>
+          <p>Ciao ${data.name}! La tua registrazione è avvenuta con successo. Ti aspettiamo a casa di Edwin in viale Ortles 88/A a Milano!<br>
           Avrai la possibilità di visitare l'esposizione e di acquistare i migliori pezzi di Design del Novecento.</p>
           <p>Hai prenotato nei seguenti giorni e orari:</p>
           ${daysText}
           <p style="margin-top: 4rem">Edwin on Mars | 20<sup>th</sup> Century Design Sale<br>
+          Viale Ortles 88/A, Milano<br>
           <a href="mailto:info@edwinonmars.com">info@edwinonmars.com</a><br>
           <a href="https://www.edwinonmars.com/" target="_blank">edwinonmars.com</a><br>
           <a href="tel:+393394729946">+39 339 4729946</a>
