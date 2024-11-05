@@ -318,7 +318,7 @@ const generateBlob = async (canvas) => {
   </div>
 {:else}
 <div style="display:flex;justify-content:center;align-items:center;width:100vw;width:100svw;height:100vh;height:100svh">
-  <p style="font-size:1.5rem">Under construction</p>
+  <p style="font-size:1.5rem">Coming soon</p>
 </div>
 {/if}
 
