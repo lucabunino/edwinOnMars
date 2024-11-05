@@ -36,14 +36,29 @@ onMount(() => {
 });
 $effect(() => {
   if (drawable) {
-      context = canvas.getContext("2d");
-      context.fillStyle = data.color2;
-      context.fillRect(0, 0, canvas.width, canvas.height);
+      setupCanvas();
+      // context = canvas.getContext("2d");
+      // context.fillStyle = data.color2;
+      // context.fillRect(0, 0, canvas.width, canvas.height);
   }
   if ($page.url.pathname !== '/') {
     drawable = false
   }
 });
+
+const setupCanvas = () => {
+  // Fix for retina screens
+  const scale = window.devicePixelRatio || 1;
+  canvas.width = innerWidth * scale;
+  canvas.height = innerHeight * scale;
+  canvas.style.width = `${innerWidth}px`;
+  canvas.style.height = `${innerHeight}px`;
+  
+  context = canvas.getContext("2d");
+  context.scale(scale, scale); // Scale to match CSS pixels
+  context.fillStyle = data.color2;
+  context.fillRect(0, 0, canvas.width / scale, canvas.height / scale);
+};
 
 const startDrawing = () => {
   drawn = true
@@ -56,17 +71,25 @@ const stopDrawing = () => {
     context.closePath();
 };
 
-const resetDrawing = () => {
-  drawingSaved = false
-  if (context) {
-      context.reset()
+// const resetDrawing = () => {
+//   drawingSaved = false
+//   if (context) {
+//       context.reset()
       
-      context.fillStyle = data.color2;
-      context.fillRect(0, 0, innerWidth, innerHeight);
-  }
-  console.log('reset');
+//       context.fillStyle = data.color2;
+//       context.fillRect(0, 0, innerWidth, innerHeight);
+//   }
+//   console.log('reset');
   
-  drawing = false;
+//   drawing = false;
+// };
+
+const resetDrawing = () => {
+  drawingSaved = false;
+  if (context) {
+    setupCanvas(); // Reset the canvas with proper scaling
+    drawing = false;
+  }
 };
 
 const draw = (event) => {
@@ -96,7 +119,7 @@ const generateBlob = async (canvas) => {
     const originalHeight = canvas.height;
     
     // Determine the longest side and set scale for 3000px
-    const maxDimension = 3000;
+    const maxDimension = 4000;
     const scaleFactor = originalWidth > originalHeight 
       ? maxDimension / originalWidth 
       : maxDimension / originalHeight;
@@ -273,8 +296,6 @@ const generateBlob = async (canvas) => {
       <canvas
         class:hidden={$page.url.pathname !== '/'}
         class="canvas"
-        width={innerWidth}
-        height={innerHeight}
         bind:this={canvas}
         onmousedown={startDrawing}
         onmouseup={stopDrawing}
@@ -355,6 +376,7 @@ const generateBlob = async (canvas) => {
   color: var(--color1);
   background-color: var(--color2);
   border: solid 2px var(--color1);
+  pointer-events: all;
 }
 :global(.btn.active) {
   color: var(--color2);
@@ -485,6 +507,7 @@ nav {
 .drawing {
   position: relative;
   height: calc(100vh - var(--gutter)*2);
+  pointer-events: none;
 }
 .drawing-buttons {
   display: -webkit-box;

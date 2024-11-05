@@ -168,7 +168,7 @@ const handleCheck = (event) => {
       <div class="text-xs checkbox-container">
         <input type="checkbox" id="terms" name="terms"
         class:empty={formResponse?.emptyFields?.includes('terms')}
-        onclick={() => {if (formResponse?.emptyFields.includes('name')) {
+        onclick={() => {if (formResponse?.emptyFields.includes('terms')) {
           formResponse.emptyFields = formResponse.emptyFields.filter(field => field !== 'terms') 
         }}}
         />
@@ -177,7 +177,7 @@ const handleCheck = (event) => {
       <div class="text-xs checkbox-container">
         <input type="checkbox" id="treatment" name="treatment"
         class:empty={formResponse?.emptyFields?.includes('treatment')}
-        onclick={() => {if (formResponse?.emptyFields.includes('name')) {
+        onclick={() => {if (formResponse?.emptyFields.includes('treatment')) {
           formResponse.emptyFields = formResponse.emptyFields.filter(field => field !== 'treatment') 
         }}}
         />
