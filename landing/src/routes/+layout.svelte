@@ -328,6 +328,7 @@ class:inverted={$page.url.pathname !== '/'}
         <p>Graphic design & Development: <a href="https://giuliabenedetti.eu/" target="_blank">Giulia Benedetti <sup>↗</sup></a>, <a href="https://lucabunino.com/" target="_blank">Luca Bunino <sup>↗</sup></a></p>
         <p>PR: <a href="https://www.gcagency.it/" target="_blank">GC Agency <sup>↗</sup></a></p>
         <p>Illustrazioni: Giulia Baraldi, Silvia Cannella, Paola Carta</p>
+        <p>Video Content Creator: <a href="https://www.instagram.com/_federicovega_?igsh=dTM3Z3ZrMTcwYno3" target="_blank">Federico Vega <sup>↗</sup></a></p>
       </div>
       <div>
         <div>
