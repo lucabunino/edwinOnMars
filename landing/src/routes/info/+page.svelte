@@ -43,7 +43,6 @@
     <a target="_blank" href="https://www.instagram.com/alpasso_milano/" class="text-m reseller">Al Passo <sup>↗</sup></a>
     <a target="_blank" href="https://www.instagram.com/capperidicasa__official/" class="text-m reseller">Capperi Di Casa <sup>↗</sup></a>
     <a target="_blank" href="https://www.instagram.com/casafika.it/" class="text-m reseller">Casafika <sup>↗</sup></a>
-    <a target="_blank" href="https://www.instagram.com/kataniadesign/" class="text-m reseller">Katania Vintage <sup>↗</sup></a>
     <a target="_blank" href="https://www.instagram.com/mitico_gallery/" class="text-m reseller">Mitico Gallery <sup>↗</sup></a>
     <a target="_blank" href="https://www.instagram.com/nostalgye_design/" class="text-m reseller">Nostalgye <sup>↗</sup></a>
     <a target="_blank" href="https://www.instagram.com/pota_vintage/" class="text-m reseller">Pota Vintage <sup>↗</sup></a>
