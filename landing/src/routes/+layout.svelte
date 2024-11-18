@@ -181,7 +181,7 @@ const generateBlob = async (canvas) => {
   <meta name="googlebot" content="index,follow">
   <meta property="og:title" content="Edwin on Mars | 20th Century Design Sale">
   <meta property="og:description" content="Edwin On Mars è una realtà multiforme che vuole far riscoprire il vero valore delle cose e invitare le persone a circondarsi di cose belle, nella concezione etica ed estetica del termine.">
-  <meta property="og:image" content="/seo.webp">
+  <meta property="og:image" content="https://www.edwinonmars.com/seo.webp">
   <meta property="og:url" content={$page.url}>
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Edwin on Mars | 20th Century Design Sale">
