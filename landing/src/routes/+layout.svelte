@@ -71,19 +71,6 @@ const stopDrawing = () => {
     context.closePath();
 };
 
-// const resetDrawing = () => {
-//   drawingSaved = false
-//   if (context) {
-//       context.reset()
-      
-//       context.fillStyle = data.color2;
-//       context.fillRect(0, 0, innerWidth, innerHeight);
-//   }
-//   console.log('reset');
-  
-//   drawing = false;
-// };
-
 const resetDrawing = () => {
   drawingSaved = false;
   if (context) {
