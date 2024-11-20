@@ -30,6 +30,10 @@
       <p>Giornali e riviste</p>
     </div>
     <div class="collaboration">
+      <a target="_blank" href="https://www.instagram.com/thecandlecluub" class="text-m">The Candle Cluub <sup>↗</sup></a>
+      <p>Candele</p>
+    </div>
+    <div class="collaboration">
       <a target="_blank" href="https://www.instagram.com/verderame_milano/" class="text-m">Verderame <sup>↗</sup></a>
       <p>Fiori e piante</p>
     </div>
