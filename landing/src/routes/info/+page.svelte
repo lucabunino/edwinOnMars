@@ -30,6 +30,10 @@
       <p>Giornali e riviste</p>
     </div>
     <div class="collaboration">
+      <a target="_blank" href="https://rhizomescents.it/" class="text-m">Rhizome <sup>↗</sup></a>
+      <p>Fragranze</p>
+    </div>
+    <div class="collaboration">
       <a target="_blank" href="https://www.instagram.com/thecandlecluub" class="text-m">The Candle Cluub <sup>↗</sup></a>
       <p>Candele</p>
     </div>
