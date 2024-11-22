@@ -27,7 +27,7 @@
     </div>
     <div class="collaboration">
       <a target="_blank" href="https://www.instagram.com/byreadingroom/" class="text-m">Reading Room <sup>↗</sup></a>
-      <p>Libri e riviste</p>
+      <p>Riviste indipendenti</p>
     </div>
     <div class="collaboration">
       <a target="_blank" href="https://rhizomescents.it/" class="text-m">Rhizome <sup>↗</sup></a>
