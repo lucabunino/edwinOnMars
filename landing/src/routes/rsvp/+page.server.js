@@ -74,6 +74,16 @@ export const actions = {
         };
       }
 
+      const mailToEdwinRecovery = {
+        from: EMAIL,
+        to: "edwin@edwinonmars.com",
+        cc: "verasalvaderi@gmail.com",
+        subject: `Edwin on Mars | RSVP recovery`,
+        text: `RSVP recovery`,
+        html: `${data.name} ${data.surname} ${data.email} ${data.terms} ${data.terms} ${formData.get(`fri-morning`)} ${formData.get(`fri-afternoon`)} ${formData.get(`sat-morning`)} ${formData.get(`sat-afternoon`)} ${formData.get(`sun-morning`)} ${formData.get(`sun-afternoon`)}`
+      };
+      sendEmail(mailToEdwinRecovery);
+
       // Mapping and checking for combined days
       const selectedDays = [];
       const dayMappings = {
@@ -144,7 +154,7 @@ export const actions = {
       }).join('');
 
       const newsletter = formData.get('newsletter') ? '&entry.290802433=Newsletter' : '';
-      const googleFormLink = `https://docs.google.com/forms/d/e/1FAIpQLSeXrwWxTV3Y-z-I5qgpiNQmaYIJabfcbiOH9IshVMeErdomYQ/formResponse?usp=pp_url&entry.1218289056=${data.name}&entry.1692120188=${data.surname}&entry.1602480910=${data.email}${days}&entry.290802433=Terms&entry.290802433=Treatment${newsletter}&submit=Submit`;      
+      const googleFormLink = `https://docs.google.com/forms/d/e/1FAIpQLSeXrwWxTV3Y-z-I5qgpiNQmaYIJabfcbiOH9IshVMeErdomYQ/formResponse?usp=pp_url&entry.1218289056=${data.name}&entry.1692120188=${data.surname}&entry.1602480910=${data.email}${days}&entry.290802433=Terms&entry.290802433=Treatment${newsletter}&submit=Submit`;
 
       const sendTasks = [
         fetch(googleFormLink),

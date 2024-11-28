@@ -60,14 +60,13 @@ let lastChecked = $state(null);
 
 // Function to handle checkbox changes
 const handleCheck = (event) => {
-  if (event.target.checked) {
-    // If a checkbox is checked, set it as the last checked
-    lastChecked = event.target.id;
-  } else {
-    // If the last checked checkbox is unchecked, clear the lastChecked variable
-    if (lastChecked === event.target.id) {
-      lastChecked = null;
-    }
+  const checkboxId = event.target.id;
+
+  // If the checkbox is checked and it's different from the last checked one
+  if (event.target.checked && lastChecked !== checkboxId) {
+    lastChecked = checkboxId;  // Update last checked checkbox
+  } else if (!event.target.checked && lastChecked === checkboxId) {
+    lastChecked = null;  // If the checkbox is unchecked, reset the last checked
   }
 };
 </script>
@@ -114,7 +113,7 @@ const handleCheck = (event) => {
       <div class="days">
         <p class="question">In quale momento del weekend vorresti venire?</p>
         <div class="day text-m">
-          <label for="fri" class="day-name">Fri 29.11</label>
+          <label for="fri-morning" class="day-name">Fri 29.11</label>
           <div>
             <input type="checkbox" id="fri-morning" name="fri-morning" class="big" checked={lastChecked === 'fri-morning'} onchange={handleCheck}/>
             <label for="fri-morning">Mattina</label>
@@ -125,7 +124,7 @@ const handleCheck = (event) => {
           </div>
         </div>
         <div class="day text-m">
-          <label for="sat" class="day-name">Sat 30.11</label>
+          <label for="sat-morning" class="day-name">Sat 30.11</label>
           <div>
             <input type="checkbox" id="sat-morning" name="sat-morning" class="big" checked={lastChecked === 'sat-morning'} onchange={handleCheck}/>
             <label for="sat-morning">Mattina</label>
@@ -136,7 +135,7 @@ const handleCheck = (event) => {
           </div>
         </div>
         <div class="day text-m">
-          <label for="sun" class="day-name">Sun 01.12</label>
+          <label for="sun-morning" class="day-name">Sun 01.12</label>
           <div>
             <input type="checkbox" id="sun-morning" name="sun-morning" class="big" checked={lastChecked === 'sun-morning'} onchange={handleCheck}/>
             <label for="sun-morning">Mattina</label>
