@@ -91,7 +91,7 @@ swiper-container {
   display: block;
   border: solid 1px var(--black);
   aspect-ratio: var(--aspectRatio);
-  padding: 1.444em .444em .444em;
+  padding: .888em .444em;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -105,6 +105,9 @@ h3 {
 }
 p {
   margin: 1em 0;
+}
+p:last-of-type {
+  margin-bottom: 0;
 }
 ul {
   list-style: none;
