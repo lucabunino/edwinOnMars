@@ -1,0 +1,134 @@
+/* Font import */
+@font-face {
+  font-family: SwissNow;
+  src:  url('/fonts/SwissNow-VAR-VF.ttf.woff2') format("truetype supports variations"),
+        url('/fonts/SwissNow-VAR-VF.ttf.woff2') format("truetype-variations");
+  font-weight: 100 1000;
+  font-style: normal;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color:transparent;
+}
+* {
+  margin: 0;
+}
+:root{
+  --gutter: .444rem;
+  --margin: 2rem;
+  --aspectRatio: 2 / 3;
+  --transition: cubic-bezier(.77,0,.175,1) 300ms;
+}
+html {
+  font-family: SwissNow, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  font-size: clamp(14px, 1.1904761905vw, 20px);
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: -.02em;
+  padding: var(--margin);
+}
+body {
+  --black: rgba(0, 0, 0, 1);
+  --white: rgba(255, 255, 255, 1);
+  color: var(--black);
+  background-color: var(--white);
+}
+body.dark {
+  --white: rgba(0, 0, 0, 1);
+  --black: rgba(255, 255, 255, 1);
+}
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
+  white-space: pre-line;
+}
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+input, button, textarea, select {
+  font: inherit;
+}
+#root, #__next {
+  isolation: isolate;
+}
+a:-webkit-any-link {
+  color: inherit;
+  cursor: pointer;
+  text-decoration: none;
+}
+a:any-link {
+  color: inherit;
+  cursor: pointer;
+  text-decoration: none;
+}
+a:not(.deal):not(.work):not(.logo):hover {
+  opacity: .3;
+}
+a:-webkit-any-link.underline,
+a:any-link.underline,
+.underline {
+  text-decoration: underline;
+}
+.swiss-28 {
+  font-size: 1.555rem;
+  font-weight: 400;
+  letter-spacing: -.03em;
+  line-height: 1.1;
+}
+.swiss-18 {
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: -.02em;
+  line-height: 1.1;
+}
+.swiss-16 {
+  font-size: 0.888rem;
+  font-weight: 500;
+  letter-spacing: -.02em;
+  line-height: 1;
+}
+.swiss-12 {
+  font-size: 0.666rem;
+  font-weight: 500;
+  letter-spacing: -.00em;
+  line-height: 1;
+}
+.uppercase {
+  text-transform: uppercase;
+}
+.tag {
+  border: solid 1px var(--black);
+  padding: .3em .3em .25em;
+}
+.mobile-only {
+  display: none;
+}
+.desktop-only {
+  /* display: unset; */
+}
+@media screen and (max-width: 900px) {
+  :root {
+    --gutter: 1.285rem;
+    --margin: 1rem;
+  }
+  html {
+    line-height: 1.2;
+  }
+  .swiss-28 {
+    font-size: 1.285rem;
+  }
+  .mobile-only {
+    display: unset;
+  }
+  .desktop-only {
+    display: none !important;
+  }
+}
