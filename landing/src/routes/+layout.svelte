@@ -72,6 +72,7 @@ const stopDrawing = () => {
 };
 
 const resetDrawing = () => {
+  drawn = false;
   drawingSaved = false;
   if (context) {
     setupCanvas(); // Reset the canvas with proper scaling
@@ -210,7 +211,7 @@ class:inverted={$page.url.pathname !== '/'}
   {/if}
 
   <main>
-    {#if $page.url.pathname === '/' || $page.url.pathname === '/info'}
+    <!-- {#if $page.url.pathname === '/' || $page.url.pathname === '/info'}
       <div class="rsvp-container">
         <a class="rsvp btn active" class:invisible={!loaded} href="/rsvp" class:inverted={$page.url.pathname === '/info'} class:info={$page.url.pathname === '/info'} class:draw={drawable} style="top: {innerWidth < 901 ? innerHeight - ctaHeight - 70 : ''}px; display:{innerWidth < 901 && $page.url.pathname === '/' && !drawable ? 'none' : ''}"
         onclick={async () => {
@@ -225,7 +226,7 @@ class:inverted={$page.url.pathname !== '/'}
           }
         }}>RSVP</a>
       </div>
-    {/if}
+    {/if} -->
     {#if $page.url.pathname === '/'}
       {#if !drawable}
         <div class="homepage">
@@ -236,7 +237,7 @@ class:inverted={$page.url.pathname !== '/'}
           <a class="rsvp btn active" class:invisible={!loaded} href="/rsvp" class:info={$page.url.pathname === '/info'} class:draw={drawable}
           style="top: unset; display:{innerWidth > 900 && $page.url.pathname === '/' ? 'none' : ''}">RSVP</a>
           <div bind:clientHeight={ctaHeight}>
-            <p class="text-xs desktop-only">Vuoi disegnare tu? Clicca qui sotto e entra nella modalità disegno. Tieni premuto per unire i puntini. Una volta salvato, il disegno ti verrà inviato insieme alla conferma di avvenuta ricezione dell’RSVP.</p>
+            <p class="text-xs desktop-only">Vuoi disegnare tu? Clicca qui sotto e entra nella modalità disegno. Tieni premuto per unire i puntini. Una volta completato, potrai scaricare il tuo disegno.</p>
             <p class="text-xs mobile-only">Puoi disegnare anche tu un oggetto! Unisci i puntini e rispondi all'RSVP per riceverlo.</p>
             <button class="btn btn-mobile" onclick={() => drawable = true}>Disegna</button>
           </div>
@@ -250,26 +251,48 @@ class:inverted={$page.url.pathname !== '/'}
           <div class="drawing-buttons bottom">
             <button class="btn" onclick={resetDrawing} ontouchstart={resetDrawing}>Ricomincia</button>
             {#if drawn}
-            <button class="btn" onclick={async () => {
+            <!-- <button class="btn" onclick={async () => {
               if (drawn) {
                 canvasImgBlob = await generateBlob(canvas);
                 canvaser.updateCanvas(canvasImgBlob);
                 drawingSaved = true
                 setTimeout(() => {
                   drawingSaved = false
-                }, 5000); 
+                }, 5000);
+              }
+            }}> -->
+            <button class="btn" onclick={async () => {
+              if (drawn) {
+                const canvasImgBlob = await generateBlob(canvas);
+                canvaser.updateCanvas(canvasImgBlob);
+                drawingSaved = true;
+            
+                // Create a download link
+                const url = URL.createObjectURL(canvasImgBlob);
+                const a = document.createElement("a");
+                a.href = url;
+                a.download = "drawing.png"; // Filename
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+            
+                // Revoke object URL after a short delay to free memory
+                setTimeout(() => {
+                  URL.revokeObjectURL(url);
+                  drawingSaved = false;
+                }, 5000);
               }
             }}>
               {#if !canvaser.canvas}
-              Salva
+              Scarica
               {:else}
-              Sovrascrivi
+              Scarica
               {/if}
             </button>
             {/if}
-            {#if drawingSaved}
+            <!-- {#if drawingSaved}
               <p class="alert btn">Disegno salvato. Vai all'RSVP!<br>Per ricominciare il disegno, clicca su “ricomincia”. Puoi salvare una nuova versione cliccando su “sovrascrivi”.</p>
-            {/if}
+            {/if} -->
             <!-- <div class="controls">
               <label>
                   Spessore:
