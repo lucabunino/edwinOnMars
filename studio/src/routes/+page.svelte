@@ -5,7 +5,7 @@ import Works from '$lib/components/Works.svelte';
 
 <section id="hero" class="swiss-28">
   <div>
-    <p>Edwin on Mars Studio si occupa di arredare spazi, esclusivamente attraverso l’utilizzo di prodotti sostenibili, ovvero recuperati dal passato o realizzati oggigiorno con tecniche etiche ed ecologiche. Il nostro approccio etico ed estetico parte dal pensare lo spazio per essere vissuto e non solo abitato, che sia una casa, un ufficio, un locale, un negozio, una galleria, o un evento. Offriamo diverse soluzioni, pensate su misura per diverse esigenze, garantendo armonia tra funzionalità ed estetica in ogni dettaglio.</p>
+    <p>EOM STUDIO si occupa di organizzare eventi e arredare spazi, esclusivamente attraverso l’utilizzo di prodotti sostenibili, ovvero recuperati dal passato o realizzati oggigiorno con tecniche etiche ed ecologiche. Il nostro approccio parte dal pensare lo spazio per essere vissuto e non solo abitato, che sia una casa, un ufficio, un locale, un negozio, una galleria, o un evento. Offriamo soluzioni pensate su misura per diverse esigenze, garantendo armonia tra funzionalità ed estetica in ogni dettaglio.</p>
     <p class="desktop-only">Portfolio and CV <a href="mailto:studio@edwinonmars.com" class="underline">on request ↗</a></p>
   </div>
   <div>

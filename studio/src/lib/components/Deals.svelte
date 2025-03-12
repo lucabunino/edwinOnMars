@@ -3,18 +3,16 @@ import { register } from 'swiper/element/bundle'; register();
 let deals = [
   {
     title: "Atmosfera",
-    description: "Il pacchetto Atmosfera offre un’esperienza su misura per definire lo stile ideale del tuo spazio.",
+    description: "Il pacchetto atmosfera offre una consulenza base per definire lo stile ideale del tuo spazio.",
     features: [
-      "consulenza base",
-      "moodboard ispirazionale",
-      "colloquio conoscitivo"
+      "colloquio conoscitivo",
+      "moodboard ispirazionale"
     ]
   },
   {
     title: "Suolo",
-    description: "Il pacchetto Suolo ti accompagna nella scelta di materiali e finiture, offrendoti un supporto mirato.",
+    description: " Il pacchetto suolo propone una consulenza intermedia che ti accompagna nella scelta di materiali e finiture, offrendoti un supporto mirato.",
     features: [
-      "consulenza intermedia",
       "colloquio conoscitivo",
       "moodboard ispirazionale",
       "shopping list",
@@ -22,13 +20,13 @@ let deals = [
   },
   {
     title: "Nucleo",
-    description: "Il pacchetto Nucleo offre un supporto avanzato per trasformare il tuo spazio, su misura per un risultato impeccabile.",
+    description: "Il pacchetto nucleo consiste in una consulenza avanzata in grado di trasformare uno spazio attraverso uno studio che va in profondità.",
     features: [
-      "consulenza avanzata",
       "colloquio conoscitivo",
       "sopralluogo",
-      "advanced case study",
-      "moodboard e shopping list",
+      "studio del caso",
+      "moodboard ispirazionale",
+      "shopping list",
       "simulazione del risultato",
     ]
   },

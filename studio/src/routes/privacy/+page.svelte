@@ -35,8 +35,8 @@
   <h2 class="swiss-28">Finalità del trattamento</h2>
   <p>I dati personali saranno trattati esclusivamente per le seguenti finalità:</p>
   <ul>
-    <li>Gestione delle iscrizioni al corso di studi</li>
-    <li>Comunicazioni organizzative e informative relative al corso</li>
+    <li>Gestione delle iscrizioni agli eventi</li>
+    <li>Comunicazioni organizzative e informative relative agli eventi</li>
     <li>Eventuali adempimenti legali e amministrativi</li>
   </ul>
   
@@ -62,7 +62,7 @@
   <p>L'utilizzo di Eventbrite potrebbe comportare il trasferimento dei dati verso server situati al di fuori dello SEE. In questi casi, Eventbrite garantisce un adeguato livello di protezione attraverso clausole contrattuali standard approvate dalla Commissione Europea.</p>
   
   <h2 class="swiss-28">Periodo di conservazione</h2>
-  <p>I dati personali saranno conservati per il tempo strettamente necessario a gestire la tua iscrizione al corso e, successivamente, per il tempo richiesto dalla normativa vigente.</p>
+  <p>I dati personali saranno conservati per il tempo strettamente necessario a gestire la tua partecipazione agli eventi e, successivamente, per il tempo richiesto dalla normativa vigente.</p>
   
   <h2 class="swiss-28">Diritti degli interessati</h2>
   <p>In qualità di interessato, hai il diritto di:</p>
