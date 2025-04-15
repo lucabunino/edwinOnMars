@@ -2,16 +2,25 @@
 import { register } from 'swiper/element/bundle'; register();
 let works = [
   {
-    title: "Café lorem ipsum",
-    subtitle: "With Giulia Brighenti",
-    tags: ["consulenza", "progetto"],
-    link: "https://www.google.com/",
+    title: "20<sup>th</sup> Century Design Sale – 1<sup>st</sup> Edition",
+    subtitle: "Alef Showroom, Milano",
+    ph: "Rita Rivezzi",
+    tags: ["sale"],
+    link: "https://design-sale.edwinonmars.com/",
   },
   {
-    title: "20th Century Design Sale",
-    subtitle: "Showroom Lorem Ipsum, Milano",
-    tags: ["sale", "evento"],
-    link: "https://20th-century-design-sale.edwinonmars.com/",
+    title: "Kuun in Touch: Shaping the Future",
+    subtitle: "Touch Studio, Milano",
+    ph: "Teresa Maria Zinnà",
+    tags: ["set design"],
+    link: "https://kuunagency.com/blogs/news/kuun-in-touch-shaping-the-future-at-milan-fashion-week-2025",
+  },
+  {
+    title: "Maud Café Charnet Edition",
+    subtitle: "Ex-Officina, Cesena",
+    ph: "David Di Segni",
+    tags: ["set design"],
+    link: "https://www.instagram.com/p/DHgDdBCtVGr/?__d=1%3Futm_source%3Dig_embed",
   },
 ]
 </script>
@@ -41,7 +50,7 @@ breakpoints={{
     <swiper-slide>
       {#if work.link}
         <a class="work" href={work.link} target="_blank" rel="noopener noreferrer">
-          <img src="img/work/{i+1}.webp" alt="">
+          <img src="img/cover/{i+1}.webp" alt="">
           {#if work.tags}
             <ul class="swiss-16 uppercase tags">
               {#each work.tags as tag}
@@ -49,8 +58,9 @@ breakpoints={{
               {/each}
             </ul>
           {/if}
-          {#if work.title} <h3>{work.title}</h3>{/if}
+          {#if work.title}<h3>{@html work.title}</h3>{/if}
           {#if work.subtitle}<h3>{work.subtitle}</h3>{/if}
+          {#if work.ph}<p class="swiss-12">Foto di {work.ph}</p>{/if}
         </a>
       {:else}
         <div class="work">
@@ -64,6 +74,7 @@ breakpoints={{
           {/if}
           {#if work.title} <h3>{work.title}</h3>{/if}
           {#if work.subtitle}<h3>{work.subtitle}</h3>{/if}
+          {#if work.ph}<p>Ph. {work.ph}</p>{/if}
         </div>
       {/if}
     </swiper-slide>
@@ -80,9 +91,10 @@ a.work:hover .tag {
 }
 img {
   aspect-ratio: var(--aspectRatio);
+  object-fit: cover;
 }
 p {
-  margin: 1em 0;
+  margin-top: .8em;
 }
 .tags {
   list-style: none;
@@ -90,6 +102,9 @@ p {
   margin: .7em 0 1.2em;
   display: flex;
   gap: .3em;
+}
+:global(sup) {
+  font-size: 70%;
 }
 @media screen and (max-width: 900px) {
   swiper-container {
