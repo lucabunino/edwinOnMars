@@ -91,7 +91,8 @@ a.work:hover .tag {
 }
 img {
   aspect-ratio: var(--aspectRatio);
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 p {
   margin-top: .8em;
@@ -100,6 +101,8 @@ p {
   list-style: none;
   padding: 0;
   margin: .7em 0 1.2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   gap: .3em;
 }
