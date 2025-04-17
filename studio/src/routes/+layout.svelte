@@ -8,6 +8,7 @@ let domLoaded = $state(false)
 $effect(() => { domLoaded = true })
 
 let showBanner = $state()
+let bannerHeight = $state()
 onMount(() => {
   const cookieConsent = localStorage.getItem('cookieConsent');
   if (cookieConsent === 'accepted') {
@@ -40,7 +41,7 @@ function acceptCookies() {
       {@render children()}
     </main>
 
-    <footer>
+    <footer style={showBanner ? `margin-bottom:${bannerHeight}px` : ""}>
       <div>
         <p>© Edwin on Mars</p>
         <p>P.IVA 01824020190</p>
@@ -52,7 +53,7 @@ function acceptCookies() {
       <p class="swiss-12">Design & Development: <a class="underline" href="https:///www.giuliabenedetti.eu/" target="_blank" rel="noopener noreferrer">Giulia Benedetti</a> e <a class="underline" href="https://www.lucabunino.com/" target="_blank" rel="noopener noreferrer">Luca Bunino</a></p>
     </footer>
     {#if showBanner}
-      <div id="cookie-banner">
+      <div id="cookie-banner" bind:clientHeight={bannerHeight}>
         <p>Utilizziamo solo cookie tecnici per garantirti la migliore esperienza di navigazione sul sito.</p>
         <p>Questi cookie sono necessari per il funzionamento del sito e non richiedono il tuo consenso.</p>
         <p>Per saperne di più, consulta la nostra <a href="cookies" class="white underline hover-green">Cookie Policy</a></p>
@@ -84,6 +85,7 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
+  transition: var(--transition);
 }
 footer div {
   display: grid;
