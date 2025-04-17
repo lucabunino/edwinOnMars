@@ -50,7 +50,7 @@ breakpoints={{
     <swiper-slide>
       {#if work.link}
         <a class="work" href={work.link} target="_blank" rel="noopener noreferrer">
-          <img src="img/cover/{i+1}.webp" alt="">
+          <img src="img/cover/{i+1}.webp" width=2560 height=1707 alt="Cover for {work.title}">
           {#if work.tags}
             <ul class="swiss-16 uppercase tags">
               {#each work.tags as tag}
@@ -58,7 +58,7 @@ breakpoints={{
               {/each}
             </ul>
           {/if}
-          {#if work.title}<h3>{@html work.title}</h3>{/if}
+          <h3>{@html work.title}</h3>
           {#if work.subtitle}<h3>{work.subtitle}</h3>{/if}
           {#if work.ph}<p class="swiss-12">Foto di {work.ph}</p>{/if}
         </a>
@@ -90,6 +90,8 @@ a.work:hover .tag {
   background-color: var(--black);
 }
 img {
+  display: block;
+  width: 100%;
   aspect-ratio: var(--aspectRatio);
   -o-object-fit: cover;
      object-fit: cover;
