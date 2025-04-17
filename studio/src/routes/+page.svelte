@@ -19,10 +19,10 @@ import Works from '$lib/components/Works.svelte';
   <h2 class="swiss-28">Pacchetti</h2>
     <Deals />
 </section>
-<!-- <section id="works">
+<section id="works">
   <h2 class="swiss-28">Works</h2>
     <Works />
-</section> -->
+</section>
 
 <style>
 section {
