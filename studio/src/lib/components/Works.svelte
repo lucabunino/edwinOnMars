@@ -6,7 +6,7 @@ let works = [
     subtitle: "Alef Showroom, Milano",
     ph: "Rita Rivezzi",
     tags: ["sale"],
-    link: "https://design-sale.edwinonmars.com/",
+    link: "https://design-sale-1.edwinonmars.com/",
   },
   {
     title: "Kuun in Touch: Shaping the Future",
