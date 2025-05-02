@@ -25,6 +25,23 @@ function acceptCookies() {
 }
 </script>
 
+<svelte:head>
+  <title>EOM Studio</title>
+  <meta name="description" content="EOM STUDIO si occupa di organizzare eventi e arredare spazi, esclusivamente attraverso l’utilizzo di prodotti sostenibili, ovvero recuperati dal passato o realizzati oggigiorno con tecniche etiche ed ecologiche. Il nostro approccio parte dal pensare lo spazio per essere vissuto e non solo abitato, che sia una casa, un ufficio, un locale, un negozio, una galleria, o un evento. Offriamo soluzioni pensate su misura per diverse esigenze, garantendo armonia tra funzionalità ed estetica in ogni dettaglio.">
+  <link rel="canonical" href={$page.url}>
+  <meta name="robots" content="index,follow">
+  <meta name="googlebot" content="index,follow">
+  <meta property="og:title" content="EOM Studio">
+  <meta property="og:description" content="EOM STUDIO si occupa di organizzare eventi e arredare spazi, esclusivamente attraverso l’utilizzo di prodotti sostenibili, ovvero recuperati dal passato o realizzati oggigiorno con tecniche etiche ed ecologiche. Il nostro approccio parte dal pensare lo spazio per essere vissuto e non solo abitato, che sia una casa, un ufficio, un locale, un negozio, una galleria, o un evento. Offriamo soluzioni pensate su misura per diverse esigenze, garantendo armonia tra funzionalità ed estetica in ogni dettaglio.">
+  <meta property="og:url" content={$page.url}>
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="EOM Studio">
+  
+  <meta property="og:image" content="/img/seo.webp">
+  <meta property="og:image:width" content="300">
+  <meta property="og:image:height" content="300">
+</svelte:head>
+
 {#if domLoaded}
   <div>
     <header>
