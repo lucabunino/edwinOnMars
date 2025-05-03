@@ -1,0 +1,179 @@
+/* Font import */
+@font-face {
+  font-family: SwissNow;
+  src:  url('/fonts/SwissNow-VAR-VF.ttf.woff2') format("truetype supports variations"),
+        url('/fonts/SwissNow-VAR-VF.ttf.woff2') format("truetype-variations");
+  font-weight: 100 1000;
+  font-style: normal;
+}
+
+/* Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+:root{
+  --gutter: 1rem;
+  --margin: 1rem;
+  --transition: cubic-bezier(.77,0,.175,1) 500ms;
+  --ivory: #FFFBC1;
+  --darkGreen: #BBB323;
+}
+html {
+  font-family: SwissNow, Helvetica, Arial, sans-serif;
+  font-weight: 100;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  font-size: clamp(10px, 1.3333333vw, 20px);
+  font-weight: 500;
+  line-height: 1.1;
+  fill: var(--ivory);
+  color: var(--ivory);
+  background-color: var(--darkGreen);
+}
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
+  white-space: pre-line;
+}
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+input, button, textarea, select {
+  font: inherit;
+}
+#root, #__next {
+  isolation: isolate;
+}
+a:-webkit-any-link {
+  color: inherit;
+  cursor: pointer;
+  text-decoration: none;
+}
+a:any-link {
+  color: inherit;
+  cursor: pointer;
+  text-decoration: none;
+}
+a:-webkit-any-link.underline,
+a:any-link.underline,
+.underline {
+  text-decoration: underline;
+}
+a:not(.no-hover):not(.logo):not(.btn):hover,
+button:not(.no-hover):not(.logo):not(.btn):hover {
+  text-decoration: underline;
+}
+button {
+  cursor: pointer;
+}
+sup {
+  font-size: .5em;
+  font-weight: 460;
+  letter-spacing: -0.04em;
+}
+.mobile-only {
+  display: none;
+}
+.text-xxs {
+  font-size: .7rem;
+  font-weight: 500;
+  letter-spacing: -0.002em;
+  line-height: 1.15;
+}
+.text-xs {
+  font-size: .9rem;
+  font-weight: 500;
+  letter-spacing: -0.005em;
+  line-height: 1.15;
+}
+.text-s {
+  font-size: 1.3rem;
+  font-weight: 500;
+  letter-spacing: -0.005em;
+}
+.text-m {
+  font-size: 2.6rem;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+.text-l {
+  font-size: 7.25rem;
+  line-height: .8;
+  font-weight: 360;
+  letter-spacing: -0.06em;
+}
+.uppercase {
+  text-transform: uppercase;
+}
+.btn {
+  font-size: 1.5rem;
+  letter-spacing: -0.02em;
+  padding: .3em 1em;
+  border-radius: 3em;
+  color: var(--ivory);
+  background-color: var(--darkGreen);
+  border: solid 2px var(--ivory);
+  pointer-events: all;
+  z-index: 3;
+}
+.btn.active {
+  color: var(--darkGreen);
+  background-color: var(--ivory);
+  border: solid 2px var(--ivory);
+}
+.invisible {
+  visibility: hidden;
+}
+@media screen and (min-width: 600px) {
+  .btn:hover {
+    color: var(--darkGreen);
+    background-color: var(--ivory);
+    border: solid 2px var(--ivory);
+  }
+  .inverted .btn:hover {
+    color: var(--ivory);
+    background-color: var(--darkGreen);
+    border: solid 2px var(--darkGreen);
+  }
+}
+@media screen and (min-width: 1400px) {
+  .text-l {
+    font-size: 9.666666vw;
+  }
+}
+@media screen and (max-width: 900px) {
+  .text-xs {
+    font-size: 1.4rem;
+  }
+  .text-s {
+    font-size: 1.4rem;
+  }
+  .text-m {
+    font-size: 2.6rem;
+  }
+  .text-l {
+    font-size: 18vw;
+  }
+  .btn {
+    font-size: 2.2rem;
+  }
+  .btn-mobile {
+    border-color: var(--darkGreen);
+  }
+}
+@media screen and (max-width: 600px) {
+  .mobile-only {
+    display: inherit;
+  }
+  .desktop-only {
+    display: none;
+  }
+}
