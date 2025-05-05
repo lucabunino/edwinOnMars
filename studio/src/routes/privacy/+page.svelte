@@ -1,4 +1,4 @@
-<section id="privacy" class="bg-white forest">
+<section id="privacy">
   <h1 class="swiss-28">Privacy Policy di edwinonmars.com</h1>
   <p>Ultimo aggiornamento: 12.03.2025</p>
   <p>Questa Privacy Policy è redatta in conformità al Regolamento Generale sulla Protezione dei Dati (Regolamento UE 2016/679 - GDPR), che garantisce la protezione dei dati personali e i diritti degli interessati all'interno dello Spazio Economico Europeo (SEE).</p>

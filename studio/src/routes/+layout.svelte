@@ -67,6 +67,7 @@ function acceptCookies() {
         <a href="https://www.instagram.com/edwinonmars/" target="_blank" rel="noopener noreferrer">@edwinonmars</a>
         <a href="/cookies">Cookies</a>
         <a href="/privacy">Privacy</a>
+        <a href="/terms">Termini e condizioni</a>
       </div>
       <p class="swiss-12">Design & Development: <a class="underline" href="https:///www.giuliabenedetti.eu/" target="_blank" rel="noopener noreferrer">Giulia Benedetti</a> e <a class="underline" href="https://www.lucabunino.com/" target="_blank" rel="noopener noreferrer">Luca Bunino</a></p>
     </footer>
