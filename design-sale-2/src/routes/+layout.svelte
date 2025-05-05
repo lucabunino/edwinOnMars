@@ -6,12 +6,14 @@ import { dev } from '$app/environment';
 const { children } = $props()
 let innerHeight = $state()
 let innerWidth = $state()
+let domLoaded = $state()
 let scrollY = $state()
 let showBanner = $state()
 let bannerHeight = $state()
 
 // Lifecycle
 onMount(() => {
+  domLoaded = true
   const cookieConsent = localStorage.getItem('cookieConsent');
   if (cookieConsent === 'accepted') {
     showBanner = false;
@@ -63,6 +65,7 @@ function handleKey({key}) {if (key === 'G' && dev) {viewGrid = !viewGrid}}
 </div>
 {/if}
 
+{#if domLoaded}
 <header class:homepage={$page.url.pathname === "/"}>
   <a href="https://www.edwinonmars.com/" class="logo" target="_blank" rel="noopener noreferrer">
     <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1521.726 251.47">
@@ -77,16 +80,16 @@ function handleKey({key}) {if (key === 'G' && dev) {viewGrid = !viewGrid}}
     {#if $page.url.pathname !== '/'}<a class="btn" href="/">Esci</a>{/if}
   </nav>
 </header>
-
 <main>
-  <div class="rsvp-container">
-    <a class="rsvp btn active" href="#" target="_blank" rel="noopener noreferrer" class:info={$page.url.pathname === '/info'} style="top: {innerWidth < 901 ? innerHeight - 70 : ''}px; display:{innerWidth < 901 && $page.url.pathname === '/' ? 'none' : ''}">RSVP</a>
-  </div>
+    <div class="rsvp-container">
+      <a class="rsvp btn active" href="#" target="_blank" rel="noopener noreferrer" class:info={$page.url.pathname === '/info'} style="top: {innerWidth < 901 ? innerHeight - 70 : ''}px;">RSVP</a>
+    </div>
   {@render children()}
 </main>
+{/if}
 
 {#if $page.url.pathname !== '/'}
-<footer class="text-xxs" style={showBanner ? `margin-bottom:${bannerHeight}px` : ""}>
+<footer class="text-xxs">
   <div>
     <p>© Edwin on Mars</p>
     <p>P.IVA 01824020190</p>

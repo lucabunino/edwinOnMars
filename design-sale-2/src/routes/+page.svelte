@@ -238,6 +238,11 @@ style="background-position: {mouseX.current}px {mouseY.current}px"
   transition: var(--transition);
   transition-property: opacity, filter;
 }
+@media screen and (max-width: 900px) {
+  #std {
+    margin-bottom: 9rem;
+  }
+}
 @media screen and (max-width: 700px) {
   #bg {
     background-image: 
