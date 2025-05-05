@@ -3,6 +3,7 @@ import "../app.css";
 let { children } = $props();
 import Switch from '$lib/components/Switch.svelte'
 import { onMount } from 'svelte'
+import { page } from "$app/state";
 let sliderValue = $state();
 let domLoaded = $state(false)
 $effect(() => { domLoaded = true })
@@ -55,6 +56,9 @@ function acceptCookies() {
     </header>
 
     <main>
+      <div class="rsvp-container">
+        <a class="rsvp btn active" href="#" target="_blank" rel="noopener noreferrer" class:info={$page.url.pathname === '/info'} style="top: {innerWidth < 901 ? innerHeight - ctaHeight - 70 : ''}px; display:{innerWidth < 901 && $page.url.pathname === '/' ? 'none' : ''}">RSVP</a>
+      </div>
       {@render children()}
     </main>
 

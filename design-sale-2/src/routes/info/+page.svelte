@@ -3,7 +3,7 @@
   <div>
     <h3 class="text-m">Fri 6.6&thinsp;—&thinsp;Mon 9.6</h3>
     <h3 class="text-m">10am to 7pm</h3>
-    <h3 class="text-m">Via A. Bergognone<br>da Fossano 26, Milano</h3>
+    <h3 class="text-m">Via A. Bergognone <br class="desktop-only">da Fossano 26, Milano</h3>
     <p style="margin-top: .75rem;"><a target="_blank" href="https://www.instagram.com/edwinonmars/">@edwinonmars</a></p>
     <p><a href="mailto:info@edwinonmars.com">info@edwinonmars.com</a></p>
     <p>T. <a href="tel:+39 339 4729946">+39 339 4729946</a></p>
@@ -26,28 +26,19 @@
 <section id="info-resellers" class="text-s">
   <h4>Rivenditori</h4>
   <div>
+    <a target="_blank" href="https://www.instagram.com/abbecedariomobile/" class="text-m reseller">Abbecedario Mobile <sup>↗</sup></a>
+    <a target="_blank" href="https://www.instagram.com/ada.sm/?hl=en" class="text-m reseller">Ada SM <sup>↗</sup></a>
     <a target="_blank" href="https://www.instagram.com/alpasso_milano/" class="text-m reseller">Al Passo <sup>↗</sup></a>
-    <a target="_blank" href="https://www.instagram.com/capperidicasa__official/" class="text-m reseller">Capperi Di Casa <sup>↗</sup></a>
+    <a target="_blank" href="https://www.instagram.com/antiquariando_milano/" class="text-m reseller">Antiquariando <sup>↗</sup></a>
+    <a target="_blank" href="https://www.instagram.com/arte_design53/" class="text-m reseller">Arte&Design53 <sup>↗</sup></a>
     <a target="_blank" href="https://www.instagram.com/casafika.it/" class="text-m reseller">Casafika <sup>↗</sup></a>
+    <a target="_blank" href="https://www.designstaging.it/" class="text-m reseller">Design Staging <sup>↗</sup></a>
+    <a target="_blank" href="https://www.instagram.com/flovintagedesign/" class="text-m reseller">Flo Vintage <sup>↗</sup></a>
     <a target="_blank" href="https://www.instagram.com/mitico_gallery/" class="text-m reseller">Mitico Gallery <sup>↗</sup></a>
-    <a target="_blank" href="https://www.instagram.com/nostalgye_design/" class="text-m reseller">Nostalgye <sup>↗</sup></a>
-    <a target="_blank" href="https://www.instagram.com/pota_vintage/" class="text-m reseller">Pota Vintage <sup>↗</sup></a>
-    <a target="_blank" href="https://www.instagram.com/safiro.modernariato/" class="text-m reseller">Safiro <sup>↗</sup></a>
-    <a target="_blank" href="https://www.instagram.com/thehouseofvintageit" class="text-m reseller">The House of Vintage <sup>↗</sup></a>
-    <p>Da inserire:
-      Abbecedario Mobile
-      Ada SM 
-      Al Passo 
-      Antiquariando
-      Arte&Design53
-      Casafika
-      Design Staging
-      Flo Vintage 
-      Mitico Gallery
-      Leia 
-      Oasi Retrò
-      Sale in Zuc
-      Violalimone</p>
+    <a target="_blank" href="https://leia-shop.com/" class="text-m reseller">Leia <sup>↗</sup></a>
+    <a target="_blank" href="https://www.instagram.com/oasi.retro/" class="text-m reseller">Oasi Retrò <sup>↗</sup></a>
+    <a target="_blank" href="https://www.instagram.com/saleinzuc__/" class="text-m reseller">Sale in Zuc <sup>↗</sup></a>
+    <a target="_blank" href="https://www.violalimone.com/" class="text-m reseller">Violalimone <sup>↗</sup></a>
   </div>
 </section>
 <section id="info-finds" class="text-s">
@@ -109,19 +100,8 @@ section + section {
   border-top: solid 1px var(--ivory);
   padding-top: 1rem;
 }
-.left-title {
-  grid-column: 2;
-}
 .reseller, .exhibitor, .credit {
   display: block;
-}
-.absolute {
-  position: absolute;
-  height: -webkit-fill-available;
-}
-.sticky {
-  position: sticky;
-  top: calc(var(--gutter)*2);
 }
 
 
@@ -130,12 +110,8 @@ section + section {
     margin-top: calc(var(--gutter)*6);
   }
   section {
-    padding: var(--gutter);
     grid-template-columns: repeat(1, 1fr);
     margin-bottom: calc(var(--gutter)*4);
-  }
-  #info-collaborations {
-    gap: calc(var(--gutter)*6);
   }
   section:last-of-type {
     margin-bottom: calc(var(--gutter)*10);

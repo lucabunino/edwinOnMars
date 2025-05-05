@@ -55,11 +55,13 @@ a:-webkit-any-link {
   color: inherit;
   cursor: pointer;
   text-decoration: none;
+  pointer-events: all;
 }
 a:any-link {
   color: inherit;
   cursor: pointer;
   text-decoration: none;
+  pointer-events: all;
 }
 a:-webkit-any-link.underline,
 a:any-link.underline,
@@ -122,7 +124,7 @@ sup {
   background-color: var(--darkGreen);
   border: solid 2px var(--ivory);
   pointer-events: all;
-  z-index: 3;
+  z-index: 4;
 }
 .btn.active {
   color: var(--darkGreen);
@@ -132,24 +134,15 @@ sup {
 .invisible {
   visibility: hidden;
 }
-@media screen and (min-width: 600px) {
-  .btn:hover {
-    color: var(--darkGreen);
-    background-color: var(--ivory);
-    border: solid 2px var(--ivory);
-  }
-  .inverted .btn:hover {
-    color: var(--ivory);
-    background-color: var(--darkGreen);
-    border: solid 2px var(--darkGreen);
-  }
-}
 @media screen and (min-width: 1400px) {
   .text-l {
     font-size: 9.666666vw;
   }
 }
 @media screen and (max-width: 900px) {
+  .text-xxs {
+    font-size: 1.2rem;
+  }
   .text-xs {
     font-size: 1.4rem;
   }
@@ -168,12 +161,22 @@ sup {
   .btn-mobile {
     border-color: var(--darkGreen);
   }
-}
-@media screen and (max-width: 600px) {
   .mobile-only {
     display: inherit;
   }
   .desktop-only {
     display: none;
+  }
+}
+@media screen and (min-width: 600px) {
+  .btn:hover {
+    color: var(--darkGreen);
+    background-color: var(--ivory);
+    border: solid 2px var(--ivory);
+  }
+  .inverted .btn:hover {
+    color: var(--ivory);
+    background-color: var(--darkGreen);
+    border: solid 2px var(--darkGreen);
   }
 }

@@ -7,28 +7,25 @@
   let innerWidth = $state(0);
   let innerHeight = $state(0);
 
-  const mouseX = new Tween(0, { duration: 3000, easing: quadOut });
-  const mouseY = new Tween(0, { duration: 3000, easing: quadOut });
+  const mouseX = new Tween(0, { duration: 1000, easing: quadOut });
+  const mouseY = new Tween(0, { duration: 1000, easing: quadOut });
   let cursorX = $state(0)
   let cursorY = $state(0)
 
   let lastTime = performance.now();
   const baseStrength = 1;
-  const percentage = .4
+  let percentage = $derived(innerWidth > 900 ? .4 : .8)
   const buffer = 2;
   const offset = 1.1;
   const multiplier = 3;
   const objectsNumber = 24;
   let cellSize = $derived(innerWidth*percentage);
 
-  let moved = $state(false);
   function handleMouseMove(e) {
-    if (!moved) {
-      requestAnimationFrame(loop);
-      moved = true
+    if (innerWidth > 600) {
+      cursorX = e.clientX;
+      cursorY = e.clientY; 
     }
-    cursorX = e.clientX;
-    cursorY = e.clientY;
   }
 
   function loop(now) {
@@ -60,9 +57,33 @@
     
     mouseX.target = (cursorX + velocity.x * eased)*multiplier;
     mouseY.target = (cursorY + velocity.y * eased)*multiplier;
-
-    requestAnimationFrame(loop);
+    if (innerWidth > 600) {
+      requestAnimationFrame(loop); 
+    } else {
+      requestAnimationFrame(verticalLoop);
+    }
   }
+
+  function verticalLoop(now) {
+    const dt = now - lastTime;
+    lastTime = now;
+
+    const scrollSpeed = 30; // pixels per second
+    cursorY += (dt / 1000) * scrollSpeed;
+
+    if (cursorY > innerHeight * 2) {
+      cursorY = 0;
+    }
+
+    mouseY.target = cursorY--;
+    mouseX.target = cursorX--;
+    if (innerWidth <= 600) {
+      requestAnimationFrame(verticalLoop);
+    } else {
+      requestAnimationFrame(loop);
+    }
+  }
+
 
   function pseudoRandom(x, y) {
     const val = Math.sin(x * 928371 + y * 189231) * 43758.5453;
@@ -97,18 +118,55 @@
   }
   return cells;
 }
+onMount(() => {
+  if (innerWidth > 600) {
+    requestAnimationFrame(loop);
+  } else {
+    requestAnimationFrame(verticalLoop);
+  }
+})
 
+let startX = $state(0)
+let startY = $state(0)
+function handleTouchStart(e) {
+  const touch = e.touches[0];
+  if (touch) {
+    startX = touch.clientX;
+    startY = touch.clientY;
+  }
+}
+
+function handleTouchMove(e) {
+  const touch = e.touches[0];
+  if (touch) {
+    const dx = touch.clientX - startX;
+    const dy = touch.clientY - startY;
+
+    cursorX += dx*2;
+    cursorY += dy*2;
+
+    startX = touch.clientX;
+    startY = touch.clientY;
+  }
+}
 </script>
 
+<!-- <svelte:window
+  bind:innerHeight
+  bind:innerWidth
+  onmousemove={(e) => handleMouseMove(e)}
+  ontouchstart={(e) => handleTouchStart(e)}
+  ontouchmove={(e) => handleTouchMove(e)}
+  ontouchend={(e) => handleTouchEnd(e)}
+/> -->
 <svelte:window
   bind:innerHeight
   bind:innerWidth
-  on:mousemove={handleMouseMove}
+  onmousemove={(e) => handleMouseMove(e)}
+  ontouchstart={(e) => handleTouchStart(e)}
+  ontouchmove={(e) => handleTouchMove(e)}
+  ontouchend={(e) => handleTouchEnd(e)}
 />
-
-<!-- <p>{mouseX.current}</p>
-<p>{mouseY.current}</p>
-<p>{cursorX} {cursorY}</p> -->
 
 <section id="std">
   <div>
@@ -123,7 +181,6 @@
 
 <div id="bg"
 bind:this={bg}
-class:visible={moved}
 style="background-position: {mouseX.current}px {mouseY.current}px"
 >
 {#each getVisibleCells() as obj, i (obj.x + ':' + obj.y)}
@@ -131,59 +188,73 @@ style="background-position: {mouseX.current}px {mouseY.current}px"
     src={obj.src}
     alt=""
     class="object"
-    class:visible={moved}
     style="transition-delay: {i*10}ms; width: {innerWidth*percentage}px; left: {obj.x + mouseX.current*offset}px; top: {obj.y + mouseY.current*offset}px;"
   />
 {/each}
 </div>
 
 <style>
+#std {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--gutter);
+  position: fixed;
+  bottom: 0;
+  margin-bottom: calc(var(--gutter) * 2);
+  width: calc(100% - var(--gutter)*2);
+}
+#std > div:nth-child(1) {
+  grid-column: 1 / span 4;
+}
+#std > div:nth-child(2) {
+  grid-column: 5 / span 9;
+}
+#bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  background-image: 
+    linear-gradient(to right, rgba(0, 0, 0, 0.1) 2px, transparent 2px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 2px, transparent 2px);
+  background-size: 10vw 10vw;
+  background-repeat: repeat;
+  z-index: -2;
+  pointer-events: none;
+  opacity: 1;
+  transition: var(--transition);
+  transition-property: opacity, filter;
+}
+.object {
+  position: absolute;
+  height: auto;
+  pointer-events: none;
+  user-select: none;
+  filter: brightness(.7);
+  mix-blend-mode: multiply;
+  opacity: 1;
+  transition: var(--transition);
+  transition-property: opacity, filter;
+}
+@media screen and (max-width: 700px) {
+  #bg {
+    background-image: 
+      linear-gradient(to right, rgba(0, 0, 0, 0.1) 1px, transparent 2px),
+      linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 1px, transparent 2px);
+    background-size: 30vw 30vw;
+  }
   #std {
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    gap: var(--gutter);
-    position: fixed;
-    bottom: 0;
-    margin-bottom: calc(var(--gutter) * 2);
-    width: calc(100% - var(--gutter)*2);
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: calc(var(--gutter)*3);
   }
   #std > div:nth-child(1) {
-    grid-column: 1 / span 4;
+    grid-column: 1 / span 1;
   }
   #std > div:nth-child(2) {
-    grid-column: 5 / span 9;
+    grid-column: 1 / span 1;
   }
-  #bg {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    pointer-events: none;
-    background-image: 
-      linear-gradient(to right, rgba(0, 0, 0, 0.1) 2px, transparent 2px),
-      linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 2px, transparent 2px);
-    background-size: 10vw 10vw;
-    background-repeat: repeat;
-    z-index: 2;
-    pointer-events: none;
-    opacity: 1;
-    transition: var(--transition);
-    transition-property: opacity, filter;
-  }
-  .object {
-    position: absolute;
-    height: auto;
-    pointer-events: none;
-    user-select: none;
-    filter: brightness(.7);
-    mix-blend-mode: multiply;
-    opacity: 1;
-    transition: var(--transition);
-    transition-property: opacity, filter;
-  }
-  /* #bg.visible, .object.visible {
-    opacity: 1;
-    filter: blur(0) brightness(.7);
-  } */
+}
 </style>
