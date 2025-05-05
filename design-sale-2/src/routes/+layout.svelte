@@ -317,7 +317,7 @@ footer div {
   }
   #cookie-banner {
     position: fixed;
-    bottom: 50%;
+    top: 50%;
     transform: translateY(-50%);
     left: var(--gutter);
     width: unset;
