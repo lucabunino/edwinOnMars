@@ -123,8 +123,8 @@ function handleKey({key}) {if (key === 'G' && dev) {viewGrid = !viewGrid}}
   </div>
   <div>
     <p><a href="https://www.edwinonmars.com/terms" target="_blank" rel="noopener noreferrer">Termini e condizioni</a></p>
-    <p class="mobile-mb-1"><a href="https://www.edwinonmars.com/privacy">Privacy Policy</a></p>
-    <p>©2024 Edwin on Mars</p>
+    <p class="mobile-mb-1"><a href="https://www.edwinonmars.com/privacy" target="_blank" rel="noopener noreferrer">Privacy Policy</a></p>
+    <p>©2025 Edwin on Mars</p>
     <p>P. IVA 01824020190</p>
   </div>
 </footer>
@@ -356,6 +356,7 @@ footer a:hover {
         -ms-flex-pack: start;
             justify-content: flex-start;
     row-gap: 0;
+    align-items: flex-start;
   }
   footer div>*:nth-child(even) {
     margin-bottom: 0;
