@@ -111,9 +111,6 @@ a:any-link.underline,
 .mobile-only {
   display: none;
 }
-.desktop-only {
-  /* display: unset; */
-}
 @media screen and (max-width: 900px) {
   :root {
     --gutter: 1.285rem;

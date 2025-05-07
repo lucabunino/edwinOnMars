@@ -16,14 +16,32 @@
   </div>
 </section>
 <section id="info-about" class="text-s">
-  <h4>About</h4>
+  <h4 class="uppercase">About</h4>
   <div>
     <p>Edwin On Mars è una realtà multiforme che vuole far riscoprire il vero valore delle cose e invitare le persone a circondarsi di cose belle, nella concezione etica ed estetica del termine.</p>
     <p style="margin-top: .75rem;">In questa seconda edizione, esploriamo l'Universo del Design del Novecento, attraverso una selezione eclettica di pezzi talmente differenti tra loro, da sembrare appartenenti a mondi diversi. Ciò che li accomuna è il loro essere eterni: provengono da vite passate e dentro di loro abitano storie inconoscibili, ma al contempo contengono un futuro ancora inespresso.</p>
     <p style="margin-top: .75rem;">Fluttuano nel tempo, immortali. Oggetti che hanno accompagnato intere esistenze e che oggi si affiancano a noi, per proseguire il loro tempo, inspiegabilmente così contemporanei e presenti.</p>
   </div>
+  <div class="mt-5 right-column">
+    <h4 class="uppercase mb-1">Rivenditori</h4>
+    <div class="text-m">
+      <a target="_blank" href="https://www.instagram.com/abbecedariomobile/" class="reseller">Abbecedario Mobile <sup>↗</sup></a>
+      <a target="_blank" href="https://www.instagram.com/ada.sm/?hl=en" class="reseller">Ada SM <sup>↗</sup></a>
+      <a target="_blank" href="https://www.instagram.com/alpasso_milano/" class="reseller">Al Passo <sup>↗</sup></a>
+      <a target="_blank" href="https://www.instagram.com/antiquariando_milano/" class="reseller">Antiquariando <sup>↗</sup></a>
+      <a target="_blank" href="https://www.instagram.com/arte_design53/" class="reseller">Arte&Design53 <sup>↗</sup></a>
+      <a target="_blank" href="https://www.instagram.com/casafika.it/" class="reseller">Casafika <sup>↗</sup></a>
+      <a target="_blank" href="https://www.designstaging.it/" class="reseller">Design Staging <sup>↗</sup></a>
+      <a target="_blank" href="https://www.instagram.com/flovintagedesign/" class="reseller">Flo Vintage <sup>↗</sup></a>
+      <a target="_blank" href="https://www.instagram.com/mitico_gallery/" class="reseller">Mitico Gallery <sup>↗</sup></a>
+      <a target="_blank" href="https://leia-shop.com/" class="reseller">Leia <sup>↗</sup></a>
+      <a target="_blank" href="https://www.instagram.com/oasi.retro/" class="reseller">Oasi Retrò <sup>↗</sup></a>
+      <a target="_blank" href="https://www.instagram.com/saleinzuc__/" class="reseller">Sale in Zuc <sup>↗</sup></a>
+      <a target="_blank" href="https://www.violalimone.com/" class="reseller">Violalimone <sup>↗</sup></a>
+    </div> 
+</div>
 </section>
-<section id="info-resellers" class="text-s">
+<!-- <section id="info-resellers" class="text-s">
   <h4>Rivenditori</h4>
   <div>
     <a target="_blank" href="https://www.instagram.com/abbecedariomobile/" class="text-m reseller">Abbecedario Mobile <sup>↗</sup></a>
@@ -40,15 +58,15 @@
     <a target="_blank" href="https://www.instagram.com/saleinzuc__/" class="text-m reseller">Sale in Zuc <sup>↗</sup></a>
     <a target="_blank" href="https://www.violalimone.com/" class="text-m reseller">Violalimone <sup>↗</sup></a>
   </div>
-</section>
+</section> -->
 <section id="info-finds" class="text-s">
-  <h4>Finds</h4>
+  <h4 class="uppercase">Finds</h4>
   <div>
     <p>Durante questi mesi su Marte ho fatto dei ritrovamenti. Reperti inspiegabili. Non mi è chiaro se provengano dal passato o dal futuro, se siano nati qui o se ci siano arrivati.</p>
     <p style="margin-top: .75rem;">Sembrano ancestrali nel processo creativo e futuristici nell’approccio tecnico produttivo.</p>
     <p style="margin-top: .75rem;">Mi hanno fatto pensare che forse, dopotutto, non è giusto bandire la Creatività per paura dell'eccesso. Forse il giusto compromesso è quello di una creazione consapevole, che rispetti al contempo la Terra e la Creatività.</p>
     <p style="margin-top: .75rem;">Edwin</p>
-    <p class="mt">Da ormai qualche anno la Terra è un pianeta artificiale, ovvero è abitata ormai da più oggetti che esseri viventi. [&thinsp;1&thinsp;]</p>
+    <p class="mt-5">Da ormai qualche anno la Terra è un pianeta artificiale, ovvero è abitata ormai da più oggetti che esseri viventi. [&thinsp;1&thinsp;]</p>
     <p style="margin-top: .75rem;">Considerando che piante e animali non possiedono oggetti, noi umani siamo gli unici responsabili.</p>
     <p>Eppure, al di là del consumismo che ci ha abituati ad accumulare, alla base di questa moltitudine di oggetti c'è un'origine creativa.</p>
     <p>È la creatività che ci ha portati a diventare inventori e costruttori. Creare è da sempre il nostro modo per concretizzare quello che siamo e che sentiamo.</p>
@@ -58,8 +76,21 @@
     <p style="margin-top: .75rem;">Finds è un'esposizione collettiva di creazioni consapevoli.</p>
     <p style="margin-top: .75rem;">1. da Ron Milo et al in Nature, ‘Global human-made mass exceeds all living biomass’</p>
   </div>
+  <div class="mt-5 mb-1 right-column">
+    <h4 class="mb-1">Espositori (todo)</h4>
+    <div class="text-m">
+      <a target="_blank" href="https://www.instagram.com/alpasso_milano/" class="exhibitor">Al Passo <sup>↗</sup></a>
+      <a target="_blank" href="https://www.instagram.com/capperidicasa__official/" class="exhibitor">Capperi Di Casa <sup>↗</sup></a>
+      <a target="_blank" href="https://www.instagram.com/casafika.it/" class="exhibitor">Casafika <sup>↗</sup></a>
+      <a target="_blank" href="https://www.instagram.com/mitico_gallery/" class="exhibitor">Mitico Gallery <sup>↗</sup></a>
+      <a target="_blank" href="https://www.instagram.com/nostalgye_design/" class="exhibitor">Nostalgye <sup>↗</sup></a>
+      <a target="_blank" href="https://www.instagram.com/pota_vintage/" class="exhibitor">Pota Vintage <sup>↗</sup></a>
+      <a target="_blank" href="https://www.instagram.com/safiro.modernariato/" class="exhibitor">Safiro <sup>↗</sup></a>
+      <a target="_blank" href="https://www.instagram.com/thehouseofvintageit" class="exhibitor">The House of Vintage <sup>↗</sup></a>
+    </div> 
+</div>
 </section>
-<section id="info-expositors" class="text-s">
+<!-- <section id="info-expositors" class="text-s">
   <h4>Espositori</h4>
   <div class="text-m">
     <a target="_blank" href="https://www.instagram.com/alpasso_milano/" class="exhibitor">Al Passo <sup>↗</sup></a>
@@ -71,8 +102,8 @@
     <a target="_blank" href="https://www.instagram.com/safiro.modernariato/" class="exhibitor">Safiro <sup>↗</sup></a>
     <a target="_blank" href="https://www.instagram.com/thehouseofvintageit" class="exhibitor">The House of Vintage <sup>↗</sup></a>
   </div>
-</section>
-<section id="info-credits" class="text-s">
+</section> -->
+<!-- <section id="info-credits" class="text-s">
   <h4>Credits</h4>
   <div>
     <a target="_blank" href="https://www.instagram.com/alpasso_milano/" class="credit">Al Passo <sup>↗</sup></a>
@@ -84,11 +115,14 @@
     <a target="_blank" href="https://www.instagram.com/safiro.modernariato/" class="credit">Safiro <sup>↗</sup></a>
     <a target="_blank" href="https://www.instagram.com/thehouseofvintageit" class="credit">The House of Vintage <sup>↗</sup></a>
   </div>
-</section>
+</section> -->
 
 <style>
-.mt {
+.mt-5 {
   margin-top: 5rem;
+}
+.mb-1 {
+  margin-bottom: 1rem;
 }
 section {
   display: grid;
@@ -103,18 +137,20 @@ section + section {
 .reseller, .exhibitor, .credit {
   display: block;
 }
-
+.right-column {
+  grid-column: 2 / span 1;
+}
 
 @media screen and (max-width: 900px) {
-  .mt {
-    margin-top: calc(var(--gutter)*6);
-  }
   section {
     grid-template-columns: repeat(1, 1fr);
     margin-bottom: calc(var(--gutter)*4);
   }
   section:last-of-type {
     margin-bottom: calc(var(--gutter)*10);
+  }
+  .right-column {
+    grid-column: 1 / span 1;
   }
 }
 </style>
