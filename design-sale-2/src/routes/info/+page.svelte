@@ -5,13 +5,13 @@
     <h3 class="text-m">10am to 7pm</h3>
     <h3 class="text-m">Via A. Bergognone <br class="desktop-only">da Fossano 26, Milano</h3>
     <p style="margin-top: .75rem;"><a target="_blank" href="https://www.instagram.com/edwinonmars/">@edwinonmars</a></p>
-    <p><a href="mailto:info@edwinonmars.com">info@edwinonmars.com</a></p>
+    <p><a href="mailto:edwin@edwinonmars.com">edwin@edwinonmars.com</a></p>
     <p>T. <a href="tel:+39 339 4729946">+39 339 4729946</a></p>
   </div>
   <div>
-    <p>Ogni giorno sulla Terra vengono prodotti una quantità smisurata di oggetti, che si aggiungono alla moltitudine di quelli già esistenti e riempiono ogni angolo del nostro Pianeta.</p>
-    <p style="margin-top: .75rem;">È per questo motivo che ho deciso di andarmene su Marte, un po' in segno di protesta e un po' per trovare un senso di pace. Ho bisogno di riscoprire la bellezza di poche cose fatte bene e che durano a lungo.</p>
-    <p style="margin-top: .75rem;">Vi chiedo un unico favore: tutte le mie cose sono a vostra disposizione e, prendendone possesso, eviterete di mettere al mondo altri oggetti e darete valore ai mobili del passato.</p>
+    <p class="italic">Ogni giorno sulla Terra vengono prodotti una quantità smisurata di oggetti, che si aggiungono alla moltitudine di quelli già esistenti e riempiono ogni angolo del nostro Pianeta.</p>
+    <p class="italic" style="margin-top: .75rem;">È per questo motivo che ho deciso di andarmene su Marte, un po' in segno di protesta e un po' per trovare un senso di pace. Ho bisogno di riscoprire la bellezza di poche cose fatte bene e che durano a lungo.</p>
+    <p class="italic" style="margin-top: .75rem;">Vi chiedo un unico favore: tutte le mie cose sono a vostra disposizione e, prendendone possesso, eviterete di mettere al mondo altri oggetti e darete valore ai mobili del passato.</p>
     <p style="margin-top: .75rem;">Edwin</p>
   </div>
 </section>
@@ -32,7 +32,6 @@
       <a target="_blank" href="https://www.instagram.com/arte_design53/" class="reseller">Arte&Design53 <sup>↗</sup></a>
       <a target="_blank" href="https://www.instagram.com/casafika.it/" class="reseller">Casafika <sup>↗</sup></a>
       <a target="_blank" href="https://www.designstaging.it/" class="reseller">Design Staging <sup>↗</sup></a>
-      <a target="_blank" href="https://www.instagram.com/flovintagedesign/" class="reseller">Flo Vintage <sup>↗</sup></a>
       <a target="_blank" href="https://www.instagram.com/mitico_gallery/" class="reseller">Mitico Gallery <sup>↗</sup></a>
       <a target="_blank" href="https://leia-shop.com/" class="reseller">Leia <sup>↗</sup></a>
       <a target="_blank" href="https://www.instagram.com/oasi.retro/" class="reseller">Oasi Retrò <sup>↗</sup></a>
@@ -41,32 +40,14 @@
     </div> 
 </div>
 </section>
-<!-- <section id="info-resellers" class="text-s">
-  <h4>Rivenditori</h4>
-  <div>
-    <a target="_blank" href="https://www.instagram.com/abbecedariomobile/" class="text-m reseller">Abbecedario Mobile <sup>↗</sup></a>
-    <a target="_blank" href="https://www.instagram.com/ada.sm/?hl=en" class="text-m reseller">Ada SM <sup>↗</sup></a>
-    <a target="_blank" href="https://www.instagram.com/alpasso_milano/" class="text-m reseller">Al Passo <sup>↗</sup></a>
-    <a target="_blank" href="https://www.instagram.com/antiquariando_milano/" class="text-m reseller">Antiquariando <sup>↗</sup></a>
-    <a target="_blank" href="https://www.instagram.com/arte_design53/" class="text-m reseller">Arte&Design53 <sup>↗</sup></a>
-    <a target="_blank" href="https://www.instagram.com/casafika.it/" class="text-m reseller">Casafika <sup>↗</sup></a>
-    <a target="_blank" href="https://www.designstaging.it/" class="text-m reseller">Design Staging <sup>↗</sup></a>
-    <a target="_blank" href="https://www.instagram.com/flovintagedesign/" class="text-m reseller">Flo Vintage <sup>↗</sup></a>
-    <a target="_blank" href="https://www.instagram.com/mitico_gallery/" class="text-m reseller">Mitico Gallery <sup>↗</sup></a>
-    <a target="_blank" href="https://leia-shop.com/" class="text-m reseller">Leia <sup>↗</sup></a>
-    <a target="_blank" href="https://www.instagram.com/oasi.retro/" class="text-m reseller">Oasi Retrò <sup>↗</sup></a>
-    <a target="_blank" href="https://www.instagram.com/saleinzuc__/" class="text-m reseller">Sale in Zuc <sup>↗</sup></a>
-    <a target="_blank" href="https://www.violalimone.com/" class="text-m reseller">Violalimone <sup>↗</sup></a>
-  </div>
-</section> -->
 <section id="info-finds" class="text-s">
   <h4 class="uppercase">Finds</h4>
   <div>
-    <p>Durante questi mesi su Marte ho fatto dei ritrovamenti. Reperti inspiegabili. Non mi è chiaro se provengano dal passato o dal futuro, se siano nati qui o se ci siano arrivati.</p>
-    <p style="margin-top: .75rem;">Sembrano ancestrali nel processo creativo e futuristici nell’approccio tecnico produttivo.</p>
-    <p style="margin-top: .75rem;">Mi hanno fatto pensare che forse, dopotutto, non è giusto bandire la Creatività per paura dell'eccesso. Forse il giusto compromesso è quello di una creazione consapevole, che rispetti al contempo la Terra e la Creatività.</p>
+    <p class="italic">Durante questi mesi su Marte ho fatto dei ritrovamenti. Reperti inspiegabili. Non mi è chiaro se provengano dal passato o dal futuro, se siano nati qui o se ci siano arrivati.</p>
+    <p class="italic" style="margin-top: .75rem;">Sembrano ancestrali nel processo creativo e futuristici nell’approccio tecnico produttivo.</p>
+    <p class="italic" style="margin-top: .75rem;">Mi hanno fatto pensare che forse, dopotutto, non è giusto bandire la Creatività per paura dell'eccesso. Forse il giusto compromesso è quello di una creazione consapevole, che rispetti al contempo la Terra e la Creatività.</p>
     <p style="margin-top: .75rem;">Edwin</p>
-    <p class="mt-5">Da ormai qualche anno la Terra è un pianeta artificiale, ovvero è abitata ormai da più oggetti che esseri viventi. [&thinsp;1&thinsp;]</p>
+    <p class="mt-5">Da ormai qualche anno la Terra è un pianeta artificiale, ovvero è abitata ormai da più oggetti che esseri viventi.<sup>1</sup></p>
     <p style="margin-top: .75rem;">Considerando che piante e animali non possiedono oggetti, noi umani siamo gli unici responsabili.</p>
     <p>Eppure, al di là del consumismo che ci ha abituati ad accumulare, alla base di questa moltitudine di oggetti c'è un'origine creativa.</p>
     <p>È la creatività che ci ha portati a diventare inventori e costruttori. Creare è da sempre il nostro modo per concretizzare quello che siamo e che sentiamo.</p>
@@ -74,50 +55,24 @@
     <p>A livello umano, ciò vorrebbe dire bandire qualsiasi forma di creatività. Una vittoria ecologica, ma una perdita etica.</p>
     <p>Forse, dunque, il giusto compromesso è quello di una creazione consapevole, che rispetti al contempo la Terra e la Creatività.</p>
     <p style="margin-top: .75rem;">Finds è un'esposizione collettiva di creazioni consapevoli.</p>
-    <p style="margin-top: .75rem;">1. da Ron Milo et al in Nature, ‘Global human-made mass exceeds all living biomass’</p>
+    <p class="text-xs" style="margin-top: 1.5rem;">1. da Ron Milo et al in Nature, ‘Global human-made mass exceeds all living biomass’</p>
   </div>
   <div class="mt-5 mb-1 right-column">
-    <h4 class="mb-1">Espositori (todo)</h4>
+    <h4 class="mb-1 uppercase">Espositori</h4>
     <div class="text-m">
-      <a target="_blank" href="https://www.instagram.com/alpasso_milano/" class="exhibitor">Al Passo <sup>↗</sup></a>
-      <a target="_blank" href="https://www.instagram.com/capperidicasa__official/" class="exhibitor">Capperi Di Casa <sup>↗</sup></a>
-      <a target="_blank" href="https://www.instagram.com/casafika.it/" class="exhibitor">Casafika <sup>↗</sup></a>
-      <a target="_blank" href="https://www.instagram.com/mitico_gallery/" class="exhibitor">Mitico Gallery <sup>↗</sup></a>
-      <a target="_blank" href="https://www.instagram.com/nostalgye_design/" class="exhibitor">Nostalgye <sup>↗</sup></a>
-      <a target="_blank" href="https://www.instagram.com/pota_vintage/" class="exhibitor">Pota Vintage <sup>↗</sup></a>
-      <a target="_blank" href="https://www.instagram.com/safiro.modernariato/" class="exhibitor">Safiro <sup>↗</sup></a>
-      <a target="_blank" href="https://www.instagram.com/thehouseofvintageit" class="exhibitor">The House of Vintage <sup>↗</sup></a>
+      <a target="_blank" href="https://www.instagram.com/abacus_atelier/" class="exhibitor">Abacus Atelier <sup>↗</sup></a>
+      <a target="_blank" href="https://www.instagram.com/cest.un.cest/" class="exhibitor">C'est un cest <sup>↗</sup></a>
+      <a target="_blank" href="https://www.instagram.com/fuocovoodoo/" class="exhibitor">Fuocovoodoo <sup>↗</sup></a>
+      <a target="_blank" href="https://www.instagram.com/superlocal/" class="exhibitor">Superlocal <sup>↗</sup></a>
     </div> 
 </div>
 </section>
-<!-- <section id="info-expositors" class="text-s">
-  <h4>Espositori</h4>
-  <div class="text-m">
-    <a target="_blank" href="https://www.instagram.com/alpasso_milano/" class="exhibitor">Al Passo <sup>↗</sup></a>
-    <a target="_blank" href="https://www.instagram.com/capperidicasa__official/" class="exhibitor">Capperi Di Casa <sup>↗</sup></a>
-    <a target="_blank" href="https://www.instagram.com/casafika.it/" class="exhibitor">Casafika <sup>↗</sup></a>
-    <a target="_blank" href="https://www.instagram.com/mitico_gallery/" class="exhibitor">Mitico Gallery <sup>↗</sup></a>
-    <a target="_blank" href="https://www.instagram.com/nostalgye_design/" class="exhibitor">Nostalgye <sup>↗</sup></a>
-    <a target="_blank" href="https://www.instagram.com/pota_vintage/" class="exhibitor">Pota Vintage <sup>↗</sup></a>
-    <a target="_blank" href="https://www.instagram.com/safiro.modernariato/" class="exhibitor">Safiro <sup>↗</sup></a>
-    <a target="_blank" href="https://www.instagram.com/thehouseofvintageit" class="exhibitor">The House of Vintage <sup>↗</sup></a>
-  </div>
-</section> -->
-<!-- <section id="info-credits" class="text-s">
-  <h4>Credits</h4>
-  <div>
-    <a target="_blank" href="https://www.instagram.com/alpasso_milano/" class="credit">Al Passo <sup>↗</sup></a>
-    <a target="_blank" href="https://www.instagram.com/capperidicasa__official/" class="credit">Capperi Di Casa <sup>↗</sup></a>
-    <a target="_blank" href="https://www.instagram.com/casafika.it/" class="credit">Casafika <sup>↗</sup></a>
-    <a target="_blank" href="https://www.instagram.com/mitico_gallery/" class="credit">Mitico Gallery <sup>↗</sup></a>
-    <a target="_blank" href="https://www.instagram.com/nostalgye_design/" class="credit">Nostalgye <sup>↗</sup></a>
-    <a target="_blank" href="https://www.instagram.com/pota_vintage/" class="credit">Pota Vintage <sup>↗</sup></a>
-    <a target="_blank" href="https://www.instagram.com/safiro.modernariato/" class="credit">Safiro <sup>↗</sup></a>
-    <a target="_blank" href="https://www.instagram.com/thehouseofvintageit" class="credit">The House of Vintage <sup>↗</sup></a>
-  </div>
-</section> -->
 
 <style>
+.italic {
+  /* font-style: italic; */
+  font-variation-settings: "ital" 12;
+}
 .mt-5 {
   margin-top: 5rem;
 }

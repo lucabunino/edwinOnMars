@@ -137,7 +137,7 @@
   </div>
   <div>
     <h2 class="text-xs uppercase" style="margin-bottom: .5rem;">Location</h2>
-    <a class="text-m" href="https://maps.app.goo.gl/G7cZVUgH9JzySP3Y7" target="_blank" rel="noopener noreferrer">Spazio Bergognone 26</a>
+    <a class="text-m" href="https://maps.app.goo.gl/G7cZVUgH9JzySP3Y7" target="_blank" rel="noopener noreferrer">Spazio Bergognone 26 <sup>↗</sup></a>
   </div>
 </section>
 

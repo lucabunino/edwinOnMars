@@ -115,12 +115,12 @@ function handleTouchMove(e) {
   </div>
   <div>
     <h2 class="text-xs uppercase" style="margin-bottom: .5rem;">Location</h2>
-    <a class="text-m" href="https://maps.app.goo.gl/G7cZVUgH9JzySP3Y7" target="_blank" rel="noopener noreferrer">Spazio Bergognone 26</a>
+    <a class="text-m" href="https://maps.app.goo.gl/G7cZVUgH9JzySP3Y7" target="_blank" rel="noopener noreferrer">Spazio Bergognone 26 <sup>↗</sup></a>
   </div>
-  <!-- <div>
+  <div>
     <h2 class="text-xs uppercase" style="margin-bottom: .5rem;">Info</h2>
-    <a class="text-m" href="mailto:info@edwinonmars.com">info@edwinonmars.com</a>
-  </div> -->
+    <a class="text-m" href="mailto:edwin@edwinonmars.com">edwin@edwinonmars.com</a>
+  </div>
 </section>
 
 <div class="bg"
