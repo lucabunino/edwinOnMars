@@ -23,7 +23,7 @@
     <p style="margin-top: .75rem;">Fluttuano nel tempo, immortali. Oggetti che hanno accompagnato intere esistenze e che oggi si affiancano a noi, per proseguire il loro tempo, inspiegabilmente così contemporanei e presenti.</p>
   </div>
   <div class="mt-5 right-column">
-    <h4 class="uppercase mb-1">Rivenditori</h4>
+    <h4 class="uppercase mb-1">Espositori</h4>
     <div class="text-m">
       <a target="_blank" href="https://www.instagram.com/abbecedariomobile/" class="reseller">Abbecedario Mobile <sup>↗</sup></a>
       <a target="_blank" href="https://www.instagram.com/ada.sm/?hl=en" class="reseller">Ada SM <sup>↗</sup></a>
@@ -31,10 +31,12 @@
       <a target="_blank" href="https://www.instagram.com/antiquariando_milano/" class="reseller">Antiquariando <sup>↗</sup></a>
       <a target="_blank" href="https://www.instagram.com/arte_design53/" class="reseller">Arte&Design53 <sup>↗</sup></a>
       <a target="_blank" href="https://www.instagram.com/casafika.it/" class="reseller">Casafika <sup>↗</sup></a>
+      <a target="_blank" href="https://www.instagram.com/dimanoinmano/" class="reseller">Di mano in mano <sup>↗</sup></a>
       <a target="_blank" href="https://www.designstaging.it/" class="reseller">Design Staging <sup>↗</sup></a>
       <a target="_blank" href="https://www.instagram.com/mitico_gallery/" class="reseller">Mitico Gallery <sup>↗</sup></a>
       <a target="_blank" href="https://leia-shop.com/" class="reseller">Leia <sup>↗</sup></a>
       <a target="_blank" href="https://www.instagram.com/oasi.retro/" class="reseller">Oasi Retrò <sup>↗</sup></a>
+      <a target="_blank" href="https://www.instagram.com/propsini.it/" class="reseller">Propsini <sup>↗</sup></a>
       <a target="_blank" href="https://www.instagram.com/saleinzuc__/" class="reseller">Sale in Zuc <sup>↗</sup></a>
       <a target="_blank" href="https://www.violalimone.com/" class="reseller">Violalimone <sup>↗</sup></a>
     </div> 
