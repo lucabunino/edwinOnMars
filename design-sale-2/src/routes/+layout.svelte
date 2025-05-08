@@ -207,6 +207,9 @@ main {
           animation: rotate 8s linear infinite;
   pointer-events: all;
 }
+.rsvp.info {
+  top: calc(100vh - 4rem - var(--gutter)*3);
+}
 .rsvp:hover {
   -webkit-animation-play-state: paused;
           animation-play-state: paused;
@@ -326,7 +329,7 @@ footer a:hover {
     position: sticky;
     right: 0 !important;
     left: unset;
-    margin: 0 var(--gutter) calc(var(--gutter)*2) var(--gutter);
+    margin: 0 calc(var(--gutter)) calc(var(--gutter)*2) auto;
   }
   .mobile-mb-1 {
     margin-bottom: 1rem !important;
