@@ -4,6 +4,7 @@ let { children } = $props();
 import Switch from '$lib/components/Switch.svelte'
 import { onMount } from 'svelte'
 import { page } from '$app/stores';
+import Marqueeck from '@arisbh/marqueeck';
 let sliderValue = $state();
 let domLoaded = $state(false)
 $effect(() => { domLoaded = true })
@@ -44,7 +45,10 @@ function acceptCookies() {
 </svelte:head>
 
 {#if domLoaded}
-  <div>
+  <a class="marquee swiss-28" href="https://design-sale-2.edwinonmars.com/" target="_blank" rel="noopener noreferrer">
+    <Marqueeck options={{ gap: 40, direction: "left" }}> <p>20<sup>th</sup> Century Design Sale — from Fri 6.6 to Mon 9.6</p></Marqueeck>
+  </a>
+  <div class="wrapper">
     <header>
       <a href="/" class="logo swiss-28">
         <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 168.255 85.172">
@@ -68,8 +72,8 @@ function acceptCookies() {
         <a href="/cookies">Cookies</a>
         <a href="/privacy">Privacy</a>
         <a href="/terms">Termini e condizioni</a>
+        <p class="swiss-12">Design & Development: <a class="underline" href="https:///www.giuliabenedetti.eu/" target="_blank" rel="noopener noreferrer">Giulia Benedetti</a> e <a class="underline" href="https://www.lucabunino.com/" target="_blank" rel="noopener noreferrer">Luca Bunino</a></p>
       </div>
-      <p class="swiss-12">Design & Development: <a class="underline" href="https:///www.giuliabenedetti.eu/" target="_blank" rel="noopener noreferrer">Giulia Benedetti</a> e <a class="underline" href="https://www.lucabunino.com/" target="_blank" rel="noopener noreferrer">Luca Bunino</a></p>
     </footer>
     {#if showBanner}
       <div id="cookie-banner" bind:clientHeight={bannerHeight}>
@@ -80,9 +84,76 @@ function acceptCookies() {
       </div>
     {/if}
   </div>
+  <a class="widget" href="https://design-sale-2.edwinonmars.com/" target="_blank" rel="noopener noreferrer">
+    <h3>20<sup>th</sup> Century Design Sale</h3>
+    <p>RSVP <sup>↗</sup></p>
+  </a>
 {/if}
 
 <style>
+.wrapper {
+  padding: var(--margin);
+}
+.marquee {
+  display: block;
+  padding: .5em 0;
+  color: #FFFBC1;
+  background-color: #BBB323;
+  display: flex;
+  overflow: hidden;
+}
+.marquee:hover {
+  opacity: 1 !important;
+}
+/* .marquee p:nth-child(1) {
+  margin-left: var(--margin);
+} */
+/* .marquee p {
+  white-space: nowrap;
+} */
+
+.widget {
+  position: fixed;
+  bottom: calc(var(--margin)*.5);
+  right: calc(var(--margin)*.5);
+  height: 200px;
+  width: 200px;
+  color: #FFFBC1;
+  background-color: #BBB323;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  z-index: 10;
+  transition: var(--transition);
+  border-radius: 50%;
+  background-image: url("/img/cactus.webp");
+  background-position: center;
+  background-size: contain;
+}
+.widget h3 {
+  font-size: 30px;
+  font-weight: 350;
+  letter-spacing: -0.02em;
+  line-height: .9;
+  margin-top: .25rem;
+  margin-bottom: .75rem;
+}
+.widget:hover {
+  transform: rotate(360deg);
+  opacity: 1 !important;
+}
+@media screen and (max-width: 700px) {
+  .widget {
+    height: 160px;
+    width: 160px;
+  }
+  .widget h3 {
+    font-size: 24px;
+  }
+}
+
 /* Header */
 header {
   padding: 0 0 var(--margin);
@@ -111,6 +182,7 @@ footer div {
   grid-template-rows: repeat(2, auto);
   grid-auto-flow: column;
   column-gap: var(--margin);
+  align-items: baseline;
 }
 
 /* Cookies */
