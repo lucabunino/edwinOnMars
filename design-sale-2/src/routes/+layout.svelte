@@ -151,6 +151,7 @@ header.homepage {
 }
 header svg {
   height: 2rem;
+  fill: var(--ivory);
 }
 h1 {
   margin: calc(var(--gutter)*1.5) 0 calc(var(--gutter)*2);
