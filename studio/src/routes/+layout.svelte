@@ -96,7 +96,7 @@ function acceptCookies() {
 }
 .marquee {
   display: block;
-  padding: .5em 0;
+  padding: .3em 0;
   color: #FFFBC1;
   background-color: #BBB323;
   display: flex;
