@@ -118,7 +118,7 @@ function handleKey({key}) {if (key === 'G' && dev) {viewGrid = !viewGrid}}
     <div class="mobile-mb-1">
       <p>Founder & Producer: Vera Salvaderi</p>
       <p>Co-Founder: David Di Segni</p>
-      <p>Set Design: Carlalberto Amadori, Stefano Marongiu</p>
+      <p>Curatorship & Set Design: <a href="https://www.instagram.com/abbecedariomobile/" target="_blank" rel="noopener noreferrer">Abbecedario Mobile (Carlalberto Amadori, Stefano Marongiu) <sup>↗</sup></a></p>
       <p>Graphic design & Development: <a href="https://giuliabenedetti.eu/" target="_blank">Giulia Benedetti <sup>↗</sup></a>, <a href="https://lucabunino.com/" target="_blank">Luca Bunino <sup>↗</sup></a></p>
       <p>Video Content Creator: <a href="https://www.instagram.com/_federicovega_?igsh=dTM3Z3ZrMTcwYno3" target="_blank">Federico Vega <sup>↗</sup></a></p>
     </div>
