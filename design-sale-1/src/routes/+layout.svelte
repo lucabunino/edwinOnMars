@@ -235,7 +235,7 @@ class:inverted={$page.url.pathname !== '/'}
             <h3 class="text-m">Viale Ortles 88/A, Milano</h3>
           </div>
           <a class="rsvp btn active" class:invisible={!loaded} href="/rsvp" class:info={$page.url.pathname === '/info'} class:draw={drawable}
-          style="top: unset; display:{innerWidth > 900 && $page.url.pathname === '/' ? 'none' : ''}">RSVP</a>
+          style="top: unset; display:{innerWidth > 900 && $page.url.pathname === '/' ? 'none' : 'none'}">RSVP</a>
           <div bind:clientHeight={ctaHeight}>
             <p class="text-xs desktop-only">Vuoi disegnare tu? Clicca qui sotto e entra nella modalità disegno. Tieni premuto per unire i puntini. Una volta completato, potrai scaricare il tuo disegno.</p>
             <p class="text-xs mobile-only">Puoi disegnare anche tu un oggetto! Unisci i puntini e rispondi all'RSVP per riceverlo.</p>
