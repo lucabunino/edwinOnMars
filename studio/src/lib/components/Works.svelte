@@ -1,13 +1,13 @@
 <script>
 import { register } from 'swiper/element/bundle'; register();
 let works = [
-  {
-    title: "20<sup>th</sup> Century Design Sale – 1<sup>st</sup> Edition",
-    subtitle: "Alef Showroom, Milano",
-    ph: "Rita Rivezzi",
-    tags: ["sale"],
-    link: "https://design-sale-1.edwinonmars.com/",
-  },
+  // {
+  //   title: "20<sup>th</sup> Century Design Sale – 1<sup>st</sup> Edition",
+  //   subtitle: "Alef Showroom, Milano",
+  //   ph: "Rita Rivezzi",
+  //   tags: ["sale"],
+  //   link: "https://design-sale-1.edwinonmars.com/",
+  // },
   {
     title: "Kuun in Touch: Shaping the Future",
     subtitle: "Touch Studio, Milano",
