@@ -31,6 +31,7 @@
       <a target="_blank" href="https://www.instagram.com/antiquariando_milano/" class="reseller">Antiquariando <sup>↗</sup></a>
       <a target="_blank" href="https://www.instagram.com/arte_design53/" class="reseller">Arte&Design53 <sup>↗</sup></a>
       <a target="_blank" href="https://www.instagram.com/casafika.it/" class="reseller">Casafika <sup>↗</sup></a>
+      <a target="_blank" href="https://www.instagram.com/circa.antwerp/" class="reseller">Circa Antwerp <sup>↗</sup></a>
       <a target="_blank" href="https://www.instagram.com/dimanoinmano/" class="reseller">Di mano in mano <sup>↗</sup></a>
       <a target="_blank" href="https://www.designstaging.it/" class="reseller">Design Staging <sup>↗</sup></a>
       <a target="_blank" href="https://www.instagram.com/mitico_gallery/" class="reseller">Mitico Gallery <sup>↗</sup></a>
@@ -63,9 +64,11 @@
     <h4 class="mb-1 uppercase">Espositori</h4>
     <div class="text-m">
       <a target="_blank" href="https://www.instagram.com/abacus_atelier/" class="exhibitor">Abacus Atelier <sup>↗</sup></a>
+      <a target="_blank" href="https://www.instagram.com/andrea.dechirico/" class="exhibitor">Andrea De Chirico <sup>↗</sup></a>
       <a target="_blank" href="https://www.instagram.com/cest.un.cest/" class="exhibitor">C'est un cest <sup>↗</sup></a>
       <a target="_blank" href="https://www.instagram.com/fuocovoodoo/" class="exhibitor">Fuocovoodoo <sup>↗</sup></a>
-      <a target="_blank" href="https://www.instagram.com/superlocal/" class="exhibitor">Superlocal <sup>↗</sup></a>
+      <a target="_blank" href="https://www.instagram.com/malfatto.ceramics/" class="exhibitor">Malfatto Ceramics <sup>↗</sup></a>
+      <a target="_blank" href="https://www.instagram.com/reverso__collection/" class="exhibitor">Reverso <sup>↗</sup></a>
     </div> 
 </div>
 </section>
