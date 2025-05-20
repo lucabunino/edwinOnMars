@@ -72,6 +72,15 @@
     </div> 
 </div>
 </section>
+<section id="info-finds" class="text-s">
+  <h4 class="uppercase">Collab</h4>
+  <div class="mb-1 right-column">
+    <div class="text-m">
+      <a target="_blank" href="https://www.instagram.com/albasser_studio/" class="exhibitor">Albasser Studio – Fiori e Piante <sup>↗</sup></a>
+      <a target="_blank" href="https://www.instagram.com/potlatch.milano/" class="exhibitor">Potlach – Libreria Pop-up <sup>↗</sup></a>
+    </div> 
+</div>
+</section>
 
 <style>
 .italic {
