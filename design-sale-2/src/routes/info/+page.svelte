@@ -67,7 +67,7 @@
       <a target="_blank" href="https://www.instagram.com/andrea.dechirico/" class="exhibitor">Andrea De Chirico <sup>↗</sup></a>
       <a target="_blank" href="https://www.instagram.com/cest.un.cest/" class="exhibitor">C'est un cest <sup>↗</sup></a>
       <a target="_blank" href="https://www.instagram.com/fuocovoodoo/" class="exhibitor">Fuocovoodoo <sup>↗</sup></a>
-      <a target="_blank" href="https://www.instagram.com/malfatto.ceramics/" class="exhibitor">Malfatto Ceramics <sup>↗</sup></a>
+	  <a target="_blank" href="https://www.instagram.com/nostalgye_design/" class="exhibitor">Nostalgye <sup>↗</sup></a>
       <a target="_blank" href="https://www.instagram.com/reverso__collection/" class="exhibitor">Reverso <sup>↗</sup></a>
     </div> 
 </div>
