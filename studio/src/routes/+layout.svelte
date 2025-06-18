@@ -45,9 +45,9 @@ function acceptCookies() {
 </svelte:head>
 
 {#if domLoaded}
-  <a class="marquee swiss-28" href="https://design-sale-2.edwinonmars.com/" target="_blank" rel="noopener noreferrer">
+  <!-- <a class="marquee swiss-28" href="https://design-sale-2.edwinonmars.com/" target="_blank" rel="noopener noreferrer">
     <Marqueeck options={{ gap: 40, direction: "left" }}> <p>20<sup>th</sup> Century Design Sale — from Fri 6.6 to Mon 9.6</p></Marqueeck>
-  </a>
+  </a> -->
   <div class="wrapper">
     <header>
       <a href="/" class="logo swiss-28">
@@ -84,10 +84,10 @@ function acceptCookies() {
       </div>
     {/if}
   </div>
-  <a class="widget" href="https://design-sale-2.edwinonmars.com/" target="_blank" rel="noopener noreferrer">
+  <!-- <a class="widget" href="https://design-sale-2.edwinonmars.com/" target="_blank" rel="noopener noreferrer">
     <h3>20<sup>th</sup> Century Design Sale</h3>
     <p>RSVP <sup>↗</sup></p>
-  </a>
+  </a> -->
 {/if}
 
 <style>

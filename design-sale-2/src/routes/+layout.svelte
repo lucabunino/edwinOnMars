@@ -83,9 +83,9 @@ function handleKey({key}) {if (key === 'G' && dev) {viewGrid = !viewGrid}}
 </header>
 {#key data.pathname}
   <main>
-      <div class="rsvp-container">
+      <!-- <div class="rsvp-container">
         <a class="rsvp btn active" href="https://www.formlite.co/s/OlT8KNiOB" target="_blank" rel="noopener noreferrer" class:info={$page.url.pathname === '/info'} style="top: {innerWidth < 901 ? innerHeight - 70 : ''}px;">RSVP</a>
-      </div>
+      </div> -->
     {@render children()}
   </main>
 {/key}
