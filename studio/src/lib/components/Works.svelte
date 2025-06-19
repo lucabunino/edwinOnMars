@@ -4,7 +4,7 @@ let works = [
 	{
 		title: "20<sup>th</sup> Century Design Sale – 2<sup>nd</sup> Edition",
 		subtitle: "Spazio Borgognone 26, Milano",
-		// ph: "Rita Rivezzi",
+		ph: "Federico Vega",
 		tags: ["sale"],
 		link: "https://design-sale-2.edwinonmars.com/",
 	},
